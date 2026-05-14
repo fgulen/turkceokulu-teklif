@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Türkçe Okulu — Kurumsal Tanıtım Broşürü</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --surface: #f9fafb;
+    --surface-dim: #e5e7eb;
+    --surface-bright: #ffffff;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f3f4f6;
+    --surface-container: #eef0f3;
+    --surface-container-high: #e8eaed;
+    --surface-container-highest: #e2e4e7;
+    --on-surface: #1e1b1c;
+    --on-surface-variant: #414751;
+    --inverse-surface: #342f30;
+    --inverse-on-surface: #f3f4f6;
+    --outline: #717882;
+    --outline-variant: #c0c7d2;
+    --primary: #1b75bc;
+    --primary-hover: #1565a8;
+    --primary-dark: #005c99;
+    --on-primary: #ffffff;
+    --primary-container: #dbeafe;
+    --on-primary-container: #1e3a5f;
+    --secondary: #00687a;
+    --on-secondary: #ffffff;
+    --secondary-container: #57dffe;
+    --on-secondary-container: #006172;
+    --tertiary: #6833d1;
+    --on-tertiary: #ffffff;
+    --tertiary-container: #ede9fe;
+    --on-tertiary-container: #4c1d95;
+    --error: #ba1a1a;
+    --feedback-correct: #16a34a;
+    --feedback-correct-bg: #dcfce7;
+    --feedback-wrong: #dc2626;
+    --feedback-wrong-bg: #fee2e2;
+    --feedback-hint: #7c3aed;
+    --feedback-hint-bg: #f5f3ff;
+    --feedback-timeout: #d97706;
+    --feedback-timeout-bg: #fef3c7;
+    --page-bg: #e5e7eb;
+    --border-color: #c0c7d2;
+    --shadow-color: rgba(0,0,0,0.04);
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --cover-stat-label: rgba(255,255,255,0.4);
+    --cover-text-sub: rgba(255,255,255,0.55);
+    --cover-text-meta: rgba(255,255,255,0.25);
+    --cover-line: rgba(255,255,255,0.1);
+    --callout-bg: var(--surface-container-low);
+    --callout-text: #1e1b1c;
+    --card-bg: rgba(255,255,255,0.85);
+    --tag-live-bg: rgba(27,117,188,0.1);
+    --tag-live-text: #1b75bc;
+    --tag-wip-bg: rgba(104,51,209,0.1);
+    --tag-wip-text: #6833d1;
+    --tag-next-bg: var(--surface-container);
+    --tag-next-text: var(--on-surface-variant);
+    --plan-bg: rgba(255,255,255,0.85);
+    --featured-bg: var(--surface-container-low);
+    --revenue-note-bg: var(--surface-container-low);
+    --revenue-note-text: #1e1b1c;
+    --table-stripe: var(--surface-container-low);
+    --body-bg: var(--surface);
+    --btn-destructive: #dc2626;
+    --btn-destructive-hover: #b91c1c;
+    --btn-success: #16a34a;
+    --btn-success-hover: #15803d;
+    --btn-warning: #d97706;
+    --btn-warning-hover: #b45309;
+    --btn-disabled-bg: #e5e7eb;
+    --btn-disabled-text: #9ca3af;
+    --combo-2x: #0d9488;
+    --combo-3x: #7c3aed;
+    --combo-5x: #ea580c;
+    --combo-10x: #dc2626;
+  }
+
+  .dark {
+    --surface: #0b0f19;
+    --surface-dim: #0d1117;
+    --surface-bright: #111827;
+    --surface-container-lowest: #070a12;
+    --surface-container-low: #111827;
+    --surface-container: #1f2937;
+    --surface-container-high: #1f2937;
+    --surface-container-highest: #374151;
+    --on-surface: #f3f4f6;
+    --on-surface-variant: #9ca3af;
+    --inverse-surface: #e2e4e7;
+    --inverse-on-surface: #1e1b1c;
+    --outline: #4b5563;
+    --outline-variant: #374151;
+    --primary: #9dcaff;
+    --primary-hover: #7bb8ff;
+    --primary-dark: #1b75bc;
+    --on-primary: #001d35;
+    --primary-container: #00497c;
+    --on-primary-container: #d1e4ff;
+    --secondary: #4cd7f6;
+    --on-secondary: #001f26;
+    --secondary-container: #00687a;
+    --on-secondary-container: #acedff;
+    --tertiary: #d0bcff;
+    --on-tertiary: #23005c;
+    --tertiary-container: #5516be;
+    --on-tertiary-container: #e9ddff;
+    --error: #ef4444;
+    --feedback-correct: #4ade80;
+    --feedback-correct-bg: rgba(22,163,74,0.15);
+    --feedback-wrong: #f87171;
+    --feedback-wrong-bg: rgba(220,38,38,0.15);
+    --feedback-hint: #a78bfa;
+    --feedback-hint-bg: rgba(124,58,237,0.15);
+    --feedback-timeout: #fbbf24;
+    --feedback-timeout-bg: rgba(217,119,6,0.15);
+    --page-bg: #070a12;
+    --border-color: #374151;
+    --shadow-color: rgba(0,0,0,0.5);
+    --cover-stat-label: rgba(255,255,255,0.35);
+    --cover-text-sub: rgba(255,255,255,0.5);
+    --cover-text-meta: rgba(255,255,255,0.2);
+    --cover-line: rgba(255,255,255,0.08);
+    --callout-bg: #1f2937;
+    --callout-text: #e2e8f0;
+    --card-bg: rgba(17,24,39,0.9);
+    --tag-live-bg: rgba(157,202,255,0.15);
+    --tag-live-text: #6ee7b7;
+    --tag-wip-bg: rgba(208,188,255,0.15);
+    --tag-wip-text: #fcd34d;
+    --tag-next-bg: #1f2937;
+    --tag-next-text: #9ca3af;
+    --plan-bg: rgba(17,24,39,0.9);
+    --featured-bg: #1f2937;
+    --revenue-note-bg: #1f2937;
+    --revenue-note-text: #e2e8f0;
+    --table-stripe: rgba(255,255,255,0.02);
+    --body-bg: var(--surface);
+    --btn-destructive: #ef4444;
+    --btn-destructive-hover: #dc2626;
+    --btn-success: #4ade80;
+    --btn-success-hover: #22c55e;
+    --btn-warning: #fbbf24;
+    --btn-warning-hover: #f59e0b;
+    --btn-disabled-bg: #374151;
+    --btn-disabled-text: #6b7280;
+    --combo-2x: #0d9488;
+    --combo-3x: #a78bfa;
+    --combo-5x: #ea580c;
+    --combo-10x: #ef4444;
+  }
+
+  html { font-size: 15px; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--on-surface);
+    background: var(--page-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.3s;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 2rem auto;
+    background: var(--body-bg);
+    padding: 2.5cm 2cm;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02), 0 20px 40px -8px var(--shadow-color);
+    transition: background 0.3s;
+  }
+
+  .theme-toggle {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 999;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    border: 1px solid var(--outline-variant);
+    background: var(--surface-container-low);
+    color: var(--on-surface);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02), 0 10px 20px -5px var(--shadow-color);
+    transition: all 0.2s;
+    backdrop-filter: blur(12px);
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.08);
+    border-color: var(--secondary-container);
+  }
+
+  /* ===== COVER ===== */
+  .page-cover {
+    background: linear-gradient(160deg, #1e1b1c 0%, #2d2728 50%, #1a1819 100%);
+    color: var(--inverse-on-surface);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2.5cm 2cm;
+  }
+
+  .page-cover::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -25%;
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(27,117,188,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .page-cover::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -15%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(104,51,209,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .cover-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-logo-bg {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+  }
+
+  .cover-logo img { height: 2.2rem; width: auto; display: block; }
+
+  .cover-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.03em;
+  }
+
+  .cover-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-title em {
+    font-style: normal;
+    color: var(--secondary-container);
+  }
+
+  .cover-sub {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--cover-text-sub);
+    max-width: 34rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-line {
+    width: 2.5rem;
+    height: 1px;
+    background: var(--cover-line);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cover-stats {
+    display: flex;
+    gap: 3rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  .cover-stat { text-align: center; }
+
+  .cover-stat-num {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+
+  .cover-stat-num.cyan { color: var(--secondary-container); }
+  .cover-stat-num.blue { color: #9dcaff; }
+  .cover-stat-num.white { color: var(--inverse-on-surface); }
+  .cover-stat-num.purple { color: #a78bfa; }
+
+  .cover-stat-label {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cover-stat-label);
+    margin-top: 0.25rem;
+  }
+
+  .cover-meta {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--cover-text-meta);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===== SECTION SHARED ===== */
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.1rem;
+    color: var(--on-surface);
+  }
+
+  .section-title-sm {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 0.75rem;
+    color: var(--on-surface);
+  }
+
+  .section-line {
+    width: 2.5rem;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .callout {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background: var(--callout-bg);
+    border-left: 3px solid var(--secondary-container);
+    padding: 1rem 1.25rem;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(12px);
+  }
+
+  .callout-marker {
+    width: 1.4rem;
+    height: 1.4rem;
+    background: var(--secondary-container);
+    border-radius: 9999px;
+    color: var(--on-secondary-container);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-top: 0.15rem;
+  }
+
+  .callout p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--callout-text);
+  }
+
+  .callout strong { color: var(--on-surface); }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02), 0 8px 20px -8px var(--shadow-color);
+  }
+
+  .card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+  }
+
+  .card ul { list-style: none; padding: 0; }
+
+  .card ul li {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: var(--callout-text);
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.35rem;
+  }
+
+  .card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: var(--secondary-container);
+    border-radius: 9999px;
+  }
+
+  .advantage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+
+  .advantage-item h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--on-surface);
+    margin-bottom: 0.2rem;
+  }
+
+  .advantage-item p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--on-surface-variant);
+  }
+
+  /* ===== PRODUCT ===== */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02), 0 8px 20px -8px var(--shadow-color);
+  }
+
+  .product-card-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+
+  .product-card-icon.feature { background: var(--primary); }
+  .product-card-icon.ai { background: var(--primary); }
+  .product-card-icon.edu { background: var(--secondary); }
+  .product-card-icon.mp { background: var(--primary); }
+  .product-card-icon.mobile { background: var(--secondary); }
+  .product-card-icon.pay { background: var(--tertiary); }
+
+  .product-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 0.25rem;
+    color: var(--on-surface);
+  }
+
+  .product-card p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--on-surface-variant);
+  }
+
+  .product-card .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+    padding: 0.2rem 0.55rem;
+    border-radius: var(--radius-sm);
+    margin-top: 0.5rem;
+  }
+
+  .tag-live { background: var(--tag-live-bg); color: var(--tag-live-text); }
+  .tag-wip { background: var(--tag-wip-bg); color: var(--tag-wip-text); }
+  .tag-next { background: var(--tag-next-bg); color: var(--tag-next-text); }
+
+  .table-wrap {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02);
+  }
+
+  .stack-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .stack-table th {
+    text-align: left;
+    padding: 0.6rem 0.85rem;
+    background: var(--inverse-surface);
+    color: var(--inverse-on-surface);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stack-table td {
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--callout-text);
+  }
+
+  .stack-table tr:last-child td { border-bottom: none; }
+  .stack-table tr:nth-child(even) td { background: var(--table-stripe); }
+
+  .status-yes { color: var(--primary); font-weight: 600; }
+  .status-no { color: var(--on-surface-variant); opacity: 0.6; }
+
+  /* ===== PRICING ===== */
+  .pricing-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    text-align: center;
+    background: var(--plan-bg);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.02), 0 8px 20px -8px var(--shadow-color);
+  }
+
+  .plan-card.featured {
+    border-color: var(--secondary-container);
+    background: var(--featured-bg);
+    position: relative;
+  }
+
+  .plan-card h4 {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--on-surface-variant);
+    margin-bottom: 0.25rem;
+  }
+
+  .plan-card .price {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+    color: var(--on-surface);
+  }
+
+  .plan-card .price-note {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--on-surface-variant);
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-card ul { list-style: none; padding: 0; text-align: left; }
+
+  .plan-card ul li {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--callout-text);
+    padding: 0.2rem 0;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+
+  .plan-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: var(--secondary-container);
+    border-radius: 9999px;
+  }
+
+  .revenue-note {
+    background: var(--revenue-note-bg);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--revenue-note-text);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+  }
+
+  .revenue-note strong { color: var(--on-surface); }
+
+  .timeline-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 1rem;
+    color: var(--on-surface);
+  }
+
+  .timeline { position: relative; }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.35rem;
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 2px;
+    background: var(--outline-variant);
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .tl-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    margin-top: 0.4rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tl-dot.blue { background: var(--primary); }
+  .tl-dot.cyan { background: var(--secondary-container); }
+  .tl-dot.purple { background: var(--tertiary); }
+  .tl-dot.gray { background: var(--on-surface-variant); }
+
+  .tl-content h4 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: var(--on-surface);
+  }
+
+  .tl-content p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--on-surface-variant);
+  }
+
+  .tl-content .date {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--secondary-container);
+    display: block;
+    margin-bottom: 0.1rem;
+  }
+
+  .dark .tl-content .date { color: var(--secondary-container); }
+
+  .page-footer {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    color: var(--on-surface-variant);
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.85rem;
+    margin-top: 1rem;
+  }
+
+  .design-credit {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    color: var(--on-surface-variant);
+    opacity: 0.35;
+    letter-spacing: 0.3px;
+  }
+  .design-credit a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .design-credit a:hover { text-decoration: underline; }
+
+  /* ===== SCREENSHOT GALLERY ===== */
+  .screen-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .screen-grid.screen-grid-yeni {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .screen-thumb {
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s;
+  }
+  .screen-thumb:hover { transform: scale(1.05); }
+  .screen-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .screen-group-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .screen-group-label .badge-eski {
+    font-size: 10px;
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .screen-group-label .badge-yeni {
+    font-size: 10px;
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* ===== COMPARISON CATEGORIES (STACKED) ===== */
+  .compare-section { margin-bottom: 1.5rem; }
+  .compare-category-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--on-surface);
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+  }
+  .compare-side {
+    background: var(--surface-container-low);
+    border-radius: var(--radius-md);
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border-color);
+  }
+  .compare-side + .compare-side { margin-top: 0.6rem; }
+  .compare-side-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--on-surface);
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+    gap: 0.35rem;
+  }
+  .compare-grid .screen-thumb {
+    aspect-ratio: 16/11;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  }
+  .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.7;
+    background: none;
+    border: none;
+    font-family: inherit;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.5;
+    background: none;
+    border: none;
+    padding: 1rem;
+    font-family: inherit;
+    transition: opacity 0.2s;
+    line-height: 1;
+    user-select: none;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-nav.prev { left: 1rem; }
+  .lightbox-nav.next { right: 1rem; }
+  .lightbox-counter {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.5);
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .identity-section {
+    margin-top: 1.5rem;
+  }
+
+  .identity-section h3 {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .palette {
+    display: flex;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .palette-swatch {
+    flex: 1;
+    height: 1.5rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .brand-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--on-surface-variant);
+  }
+
+  .brand-details strong { color: var(--on-surface); }
+
+  /* ===== PAGE NUMBER ===== */
+  .page-number {
+    position: absolute;
+    bottom: 1.2cm;
+    right: 2cm;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    opacity: 0.5;
+  }
+  .page-cover .page-number { color: rgba(255,255,255,0.2); opacity: 1; }
+
+  /* ===== BUTTONS ===== */
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.1rem;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    font-family: 'Inter', sans-serif;
+    border-radius: var(--radius-md);
+    border: none;
+    cursor: default;
+    transition: all 0.2s;
+  }
+
+  .btn-primary { background: var(--primary); color: var(--on-primary); }
+  .btn-ghost { background: transparent; color: var(--primary); }
+  .btn-ghost:hover { background: var(--primary-container); }
+  .btn-ai { background: var(--primary); color: var(--on-primary); }
+  .btn-destructive { background: var(--btn-destructive); color: white; }
+  .btn-success { background: var(--btn-success); color: white; }
+  .btn-warning { background: var(--btn-warning); color: white; }
+  .btn-disabled { background: var(--btn-disabled-bg); color: var(--btn-disabled-text); cursor: not-allowed; }
+
+  /* ===== INPUT ===== */
+  .input-sample {
+    width: 100%;
+    max-width: 24rem;
+    padding: 0.6rem 0.85rem;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: var(--on-surface);
+    background: var(--background);
+    border: 1px solid var(--surface-dim);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+  }
+
+  .input-sample:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(27,117,188,0.15);
+  }
+
+  /* ===== FEEDBACK BANNERS ===== */
+  .banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 0.65rem;
+    font-size: 14px;
+    line-height: 22px;
+    border-left: 4px solid;
+  }
+
+  .banner-correct { background: var(--feedback-correct-bg); border-left-color: var(--feedback-correct); }
+  .banner-wrong { background: var(--feedback-wrong-bg); border-left-color: var(--feedback-wrong); }
+  .banner-hint { background: var(--feedback-hint-bg); border-left-color: var(--feedback-hint); }
+  .banner-timeout { background: var(--feedback-timeout-bg); border-left-color: var(--feedback-timeout); }
+
+  /* ===== SWATCHES ===== */
+  .swatch-row {
+    display: flex;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .swatch {
+    flex: 1;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .swatch-color { height: 2rem; width: 100%; }
+
+  .swatch-label {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    color: var(--on-surface-variant);
+    padding: 0.3rem 0.25rem;
+    text-align: center;
+    background: var(--surface-container-low);
+  }
+
+  .swatch-group-label {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--on-surface);
+    margin-bottom: 0.3rem;
+    margin-top: 0.75rem;
+  }
+
+  .swatch-group-label:first-child { margin-top: 0; }
+
+  .color-hex {
+    font-family: monospace;
+    font-size: 10px;
+    color: var(--on-surface-variant);
+    opacity: 0.7;
+  }
+
+  /* ===== GRID HELPERS ===== */
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .activity-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--surface-container-low);
+    border-radius: var(--radius-sm);
+  }
+
+  .activity-dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+    .theme-toggle { display: none; }
+    .card, .product-card, .plan-card { backdrop-filter: none; }
+  }
+
+  @media screen and (max-width: 800px) {
+    .page { width: 100%; margin: 0; border-radius: 0; padding: 1.5cm 1cm; }
+    .two-col, .product-grid, .pricing-three, .advantage-grid, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+    .cover-stats { flex-wrap: wrap; gap: 2rem; }
+    .cover-title { font-size: 28px; line-height: 36px; letter-spacing: -0.01em; }
+    .brand-details { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Aydınlık/Karanlık mod">☀️</button>
+
+<script>
+(function() {
+  const saved = localStorage.getItem('turkceokulu-theme');
+  if (saved === 'dark') document.documentElement.classList.add('dark');
+  else if (saved === 'light') document.documentElement.classList.remove('dark');
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+    document.documentElement.classList.add('dark');
+  updateToggle();
+})();
+
+function toggleTheme() {
+  document.documentElement.classList.toggle('dark');
+  const isDark = document.documentElement.classList.contains('dark');
+  localStorage.setItem('turkceokulu-theme', isDark ? 'dark' : 'light');
+  updateToggle();
+}
+
+function updateToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+}
+</script>
+
+<!-- PAGE 1: COVER -->
+<div class="page page-cover" id="page-1">
+  <div class="cover-logo">
+    <div class="cover-logo-bg">
+      <img src="logo.png" alt="Türkçe Okulu">
+    </div>
+  </div>
+
+  <h1 class="cover-title">Türkçe Öğreniminin<br><em>Geleceği</em></h1>
+
+  <p class="cover-sub">
+    54 bin mevcut öğrenci, 20 etkinlik türü ve yapay zeka destekli içerik stüdyosuyla Türkçe öğretimini modern bir platforma taşıyoruz.
+  </p>
+
+  <div class="cover-line"></div>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <div class="cover-stat-num cyan">53.907</div>
+      <div class="cover-stat-label">Kayıtlı öğrenci</div>
+    </div>
+    <div class="cover-stat">
+      <div class="cover-stat-num blue">30+</div>
+      <div class="cover-stat-label">Ders kitabı</div>
+    </div>
+    <div class="cover-stat">
+      <div class="cover-stat-num purple">%70</div>
+      <div class="cover-stat-label">MVP tamam</div>
+    </div>
+  </div>
+
+  <p class="cover-meta">ASP.NET Core 8 · Next.js 15 · Cloudflare R2 · Launch Ağustos 2026</p>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">1</span>
+</div>
+
+<!-- PAGE 2: TABLE OF CONTENTS -->
+<div class="page" id="page-2">
+  <h2 class="section-title">İçindekiler</h2>
+  <div class="section-line"></div>
+
+  <div style="display:flex;flex-direction:column;gap:0.5rem;margin-top:2rem;">
+    <a href="#page-1" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">1</span>
+      <div><div style="font-weight:600;">Kapak</div><div style="font-size:13px;color:var(--on-surface-variant);">Türkçe Öğreniminin Geleceği</div></div>
+    </a>
+    <a href="#page-3" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">3</span>
+      <div><div style="font-weight:600;">Ürün ve Teknoloji</div><div style="font-size:13px;color:var(--on-surface-variant);">Platformun mevcut durumu ve teknoloji yığını</div></div>
+    </a>
+    <a href="#page-4" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">4</span>
+      <div><div style="font-weight:600;">AI İçerik Stüdyosu</div><div style="font-size:13px;color:var(--on-surface-variant);">Claude API ile 7 tür içerik üretimi</div></div>
+    </a>
+    <a href="#page-5" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">5</span>
+      <div><div style="font-weight:600;">Oyunlaştırma</div><div style="font-size:13px;color:var(--on-surface-variant);">Kalp, Streak, Combo, Ligler ve Günlük Görevler</div></div>
+    </a>
+    <a href="#page-6" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">6</span>
+      <div><div style="font-weight:600;">Fırsat ve Pazar</div><div style="font-size:13px;color:var(--on-surface-variant);">48 ülke, 56 bin kullanıcı, büyüme potansiyeli</div></div>
+    </a>
+    <a href="#page-7" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">7</span>
+      <div><div style="font-weight:600;">Gelir Modeli</div><div style="font-size:13px;color:var(--on-surface-variant);">Abonelik planları ve kurumsal satış modeli</div></div>
+    </a>
+    <a href="#page-8" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">8</span>
+      <div><div style="font-weight:600;">Yol Haritası</div><div style="font-size:13px;color:var(--on-surface-variant);">Geliştirme takvimi ve gelecek vizyonu</div></div>
+    </a>
+    <a href="#page-9" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">9</span>
+      <div><div style="font-weight:600;">Kurumsal Kimlik</div><div style="font-size:13px;color:var(--on-surface-variant);">Butonlar, kartlar, input alanları, bannerlar ve etkinlik türleri</div></div>
+    </a>
+    <a href="#page-10" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">10</span>
+      <div><div style="font-weight:600;">Oyunlaştırma UI Bileşenleri</div><div style="font-size:13px;color:var(--on-surface-variant);">Oyunlaştırma, geribildirim ve etkinlik renkleri</div></div>
+    </a>
+    <a href="#page-11" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">11</span>
+      <div><div style="font-weight:600;">Eski ve Yeni Sistem</div><div style="font-size:13px;color:var(--on-surface-variant);">Ekran görüntüleri ile karşılaştırma</div></div>
+    </a>
+    <a href="#page-12" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">12</span>
+      <div><div style="font-weight:600;">Yazılım Geliştirme Teklifi</div><div style="font-size:13px;color:var(--on-surface-variant);">İlk aşama 4.000 EUR · Aylık 2.000 EUR sürekli geliştirme</div></div>
+    </a>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">2</span>
+</div>
+
+<!-- PAGE 3: PRODUCT -->
+<div class="page" id="page-3">
+  <h2 class="section-title">Ürün ve Teknoloji</h2>
+  <div class="section-line"></div>
+
+  <div class="callout">
+    <div class="callout-marker">i</div>
+    <p><strong>MVP'nin %70'i tamamlandı.</strong> API (ASP.NET Core 8) ve Web (Next.js 15) ayakta. 50'den fazla API endpoint, 13 etkinlik oynatıcı, kurumsal paneller ve AI stüdyo çalışır durumda.</p>
+  </div>
+
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-card-icon feature">O</div>
+      <h4>Oyunlaştırma Sistemi</h4>
+      <p>Kalp sistemi, XP ve combo zinciri, günlük streak ve haftalık lig (10 seviye, 30 kişi).</p>
+      <span class="tag tag-live">Çalışıyor</span>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">AI</div>
+      <h4>AI İçerik Stüdyosu</h4>
+      <p>Claude API ile 30 saniyede quiz, çalışma kâğıdı ve konuşma egzersizi üretimi. 7 tür içerik.</p>
+      <span class="tag tag-live">Çalışıyor</span>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon edu">K</div>
+      <h4>Kurumsal Panel</h4>
+      <p>Sınıf yönetimi, QR kodla öğrenci katılımı, ödev, duyuru, Excel rapor ve badge PDF.</p>
+      <span class="tag tag-live">Çalışıyor</span>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon mp">C</div>
+      <h4>Canlı Sınıf (Kahoot)</h4>
+      <p>SignalR WebSocket ile gerçek zamanlı sınıf quizi. Liderlik tablosu, hız puanı. 1v1 Düello sırada.</p>
+      <span class="tag tag-wip">Kısmî</span>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon mobile">M</div>
+      <h4>Mobil Uygulama</h4>
+      <p>React Native + Expo ile iOS ve Android. Web MVP tamamlanınca başlanacak. Tek kod tabanı.</p>
+      <span class="tag tag-next">Sırada</span>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon pay">Ö</div>
+      <h4>Ödeme Sistemi</h4>
+      <p>Stripe. Bireysel ve kurumsal abonelik. Bu fazda ekleniyor.</p>
+      <span class="tag tag-next">Sırada</span>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table class="stack-table">
+      <thead>
+        <tr><th>Alan</th><th>Teknoloji</th><th>Durum</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Backend API</td><td>ASP.NET Core 8 + EF Core + MySQL</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>Web Frontend</td><td>Next.js 15 + TypeScript + Tailwind</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>Gerçek Zamanlı</td><td>SignalR WebSocket</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>Auth</td><td>JWT + Refresh Token + PIN + QR</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>AI İçerik</td><td>Claude API + Word Export</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>Sosyal Giriş</td><td>Google + Apple</td><td class="status-no">Sırada</td></tr>
+        <tr><td>Ödeme</td><td>Stripe</td><td class="status-no">Sırada</td></tr>
+        <tr><td>Mobil</td><td>React Native + Expo</td><td class="status-no">Faz 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">3</span>
+</div>
+
+<!-- PAGE 4: AI STUDIO -->
+<div class="page" id="page-4">
+  <h2 class="section-title">AI İçerik Stüdyosu</h2>
+  <div class="section-line"></div>
+
+  <div class="callout">
+    <div class="callout-marker">AI</div>
+    <p><strong>Öğretmenler için yapay zeka destekli içerik üretim platformu.</strong> Claude API (claude-sonnet-4-6) ile 30 saniyede quiz, çalışma kâğıdı, konuşma egzersizi ve daha fazlası. Sadece öğretmenlere özel, pedagojik olarak doğru içerik üretimi.</p>
+  </div>
+
+  <h3 class="section-title-sm">7 Tür İçerik</h3>
+  <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.75rem;">Bunlardan bir kısmı ilk etapta olgunlaştırılıp test edilerek kullanıma açılacak, kalan türler sonraki güncellemelerle eklenecektir.</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-card-icon ai">Q</div>
+      <h4>Quiz</h4>
+      <p>Çoktan seçmeli sorular. CEFR seviyesine göre otomatik zorluk ayarı. İpucu dili seçilebilir (EN, DE, FR, AR).</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">E</div>
+      <h4>Eşleştirme</h4>
+      <p>Kelime- anlam, görsel-metin eşleştirme egzersizleri. 5-20 soru arası, seviyeye uygun kelime havuzu.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">B</div>
+      <h4>Boşluk Doldurma</h4>
+      <p>Bağlamlı boşluk doldurma soruları. Ünite kelimeleriyle otomatik uyumlu, pedagojik sıralama.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">W</div>
+      <h4>Çalışma Kâğıdı</h4>
+      <p>Word (.docx) formatında indirilebilir çalışma kâğıdı. Sınıfta basılı olarak kullanıma hazır.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">K</div>
+      <h4>Konuşma Egzersizi</h4>
+      <p>Seviyeye uygun diyalog, kelime listesi ve anlama soruları. AI ile doğal konuşma pratiği.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">R</div>
+      <h4>Resim Analizi</h4>
+      <p>Yüklenen 1-10 resmi Claude Vision ile analiz eder, Türkçe açıklama ve kelime üretir.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">B</div>
+      <h4>Sınıf Bülteni</h4>
+      <p>Sınıf istatistiklerine göre AI ile veli bülteni yazar. Kişiselleştirilmiş, profesyonel rapor.</p>
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">Öne Çıkan Özellikler</h3>
+  <div class="two-col">
+    <div class="card">
+      <h3>Akıllı Üretim</h3>
+      <ul>
+        <li>Claude Sonnet 4-6 ile 30 saniyede içerik</li>
+        <li>CEFR A1'den C2'ye tüm seviyeler</li>
+        <li>Kaynak ünite seçimi — kitapla %100 uyumlu</li>
+        <li>4 odak modu: Grammar, Culture, DailyLife, EasyToHard</li>
+        <li>İpucu dili: İngilizce, Almanca, Fransızca, Arapça</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Pedagojik Altyapı</h3>
+      <ul>
+        <li>Master Turkish Pedagogy Specialist rolüyle prompt</li>
+        <li>Ek şablonlar (çeviri, gramer notu, kültürel not)</li>
+        <li>Ünite bağlamını otomatik analiz eder</li>
+        <li>Word (.docx) export — basılı kullanım</li>
+        <li>"İlham Al" — örnek yönlendirme şablonları</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="revenue-note" style="margin-bottom:0;">
+    <strong>Kullanıcıya sağladığı avantaj:</strong> Öğretmenler dakikalar içinde sınıf seviyesine uygun, pedagojik olarak doğru Türkçe içeriği üretir. Quiz, çalışma kâğıdı, konuşma egzersizi ve bülten — hepsi tek panelden. Word export ile basılı materyal anında hazır.
+  </div>
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">4</span>
+</div>
+
+<!-- PAGE 5: OYUNLASTIRMA MEKANIKLERI -->
+<div class="page" id="page-5">
+  <h2 class="section-title">Öğrenmeyi Kalıcı Kılan Oyunlaştırma</h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Türkçe Okulu'nda her oyunlaştırma mekaniği, öğrencinin motivasyonunu canlı tutmak ve dili günlük yaşamın bir parçası haline getirmek için tasarlandı. Amaç eğlenirken öğretmek değil, öğrenmeyi alışkanlığa dönüştürmek.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <span style="font-size:18px;line-height:1;">❤️</span>
+        <h3 style="margin:0;color:#ef4444;font-size:18px;">Kalp Sistemi</h3>
+      </div>
+      <p style="margin-bottom:0;">Öğrencinin her şeyi rastgele işaretlemesini engeller, her sorunun bir ağırlığı olduğunu hissettirir. Yanlış cevap bir kalp kaybettirir, kalpler zamanla yenilenir. Bu, gerçek hayattaki gibi: hata yapmak öğretir ama her hatanın bir sonucu vardır. Öğrenciyi düşünmeye, emin olmadan cevap vermemeye teşvik eder.</p>
+    </div>
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <span style="font-size:18px;line-height:1;">🔥</span>
+        <h3 style="margin:0;color:#f97316;font-size:18px;">Günlük Seri (Streak)</h3>
+      </div>
+      <p style="margin-bottom:0;">Dil öğreniminde en önemli şey sürekliliktir. Haftada bir kere iki saat çalışmak yerine her gün 15 dakika ayırmak çok daha etkilidir. Streak sistemi, öğrenciyi her gün uğramaya motive eder. Seri uzadıkça öğrenci kendi rekorunu kırmak ister, bu da dili günlük rutinin bir parçası haline getirir.</p>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <span style="font-size:18px;line-height:1;">⚡</span>
+        <h3 style="margin:0;color:#7c3aed;font-size:18px;">Combo (XP Çarpanı)</h3>
+      </div>
+      <p style="margin-bottom:0;">Ardışık doğru cevaplar combo çarpanını artırır. Bu, öğrencinin dikkatini canlı tutar ve bildiği konularda hız kazanmasını sağlar. Pedagojik faydası: öğrenci, art arda doğru cevap verebileceği bir akış yakaladığında özgüveni yükselir, öğrenme hızlanır. Combo kırıldığında ise hata yaptığı yeri fark eder ve oraya odaklanır.</p>
+    </div>
+    <div class="card">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+        <span style="font-size:18px;line-height:1;">🏆</span>
+        <h3 style="margin:0;color:#a16207;font-size:18px;">Haftalık Ligler</h3>
+      </div>
+      <p style="margin-bottom:0;">30 kişilik, aynı seviyedeki öğrencilerle haftalık bir yarış. Amaç başkalarını yenmek değil, kendi seviyende ilerlemek. İlk 10 terfi eder, son 5 düşer. Lig sistemi, öğrenciye "ben neredeyim, nereye gitmeliyim?" sorusunu sordurur. Rekabet değil, sağlıklı bir motivasyon kaynağı: üst lige çıkmak için çalışmak öğrenmeyi artırır.</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:0;">
+    <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+      <h3 style="margin:0;color:#1b75bc;font-size:18px;">Günlük Görevler</h3>
+    </div>
+    <p style="margin-bottom:0;">Her gün öğrenciye 3 görev sunulur: belirli bir süre çalışmak, hatasız etkinlik tamamlamak veya multiplayer oyuna katılmak gibi. Görevler tamamlandıkça XP ve kalp gibi ödüller kazanılır. Pedagojik faydası: öğrenci ne yapması gerektiğini bilir, küçük hedefler büyük alışkanlıklara dönüşür. Her görev, dilin farklı bir becerisini (okuma, dinleme, yazma, konuşma) hedef alacak şekilde çeşitlendirilmiştir.</p>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">5</span>
+</div>
+
+<!-- PAGE 6: OPPORTUNITY -->
+<div class="page" id="page-6">
+  <h2 class="section-title">Fırsat ve Pazar</h2>
+  <div class="section-line"></div>
+  <div class="callout">
+    <div class="callout-marker">i</div>
+    <p><strong>Türkçe Okulu, 2013 yılında yayına başladı.</strong> Kazakistan'dan Amerika'ya 48 farklı ülkeden 56 bin kullanıcıya ulaştı ve 20 milyon etkileşim oluşturdu. Gelen talepler sistemin 13 yılı geride bıraktığını, yenilenmeye ve modern çağın gerekliliklerini karşılamaya ihtiyacı olduğunu gösteriyor. Bu gereklilik, mevcut birikimi çağdaş bir projeye dönüştürmeyi zorunlu hale getiriyor.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Mevcut durum</h3>
+      <ul>
+        <li>2013'ten beri yayında, 48 ülke, 56 bin kullanıcı</li>
+        <li>20 milyon etkileşim, organik büyüme</li>
+        <li>Nevlisan, Anadolu DKM ve Dilset yayınlarından oluşan 30 adet ders kitabı</li>
+        <li>A1'den C2'ye tüm CEFR seviyelerinde içerik</li>
+        <li>ASP.NET 4.5 + Bootstrap 2 — 13 yıllık altyapı</li>
+        <li>Hatalı sorular, çalışmayan etkinlikler</li>
+        <li>Mobil uyumsuz arayüz</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Büyüme potansiyeli</h3>
+      <ul>
+        <li>Mobil uygulama ile kullanıcı tabanında 5–10x büyüme</li>
+        <li>10'dan fazla ülkede Türkçe öğreten kurum var</li>
+        <li>AI İçerik Stüdyosu ile öğretmenlere premium satış</li>
+        <li>Multiplayer modlar (Kahoot, Düello) ile viral büyüme</li>
+        <li>Duolingo kursu yüzeysel, Babbel pahalı — arada bir yer</li>
+        <li>GDPR uyumlu, Birleşik Krallık merkezli yapı</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:0;">
+    <h3>Rakiplerle karşılaştırma</h3>
+    <div class="advantage-grid">
+      <div class="advantage-item">
+        <h4>Duolingo'ya karşı</h4>
+        <p>20 etkinlik türü (Duolingo'da 4–5 tip). Gerçek CEFR kitap içeriği, sadece oyunlaştırma değil.</p>
+      </div>
+      <div class="advantage-item">
+        <h4>Babbel'e karşı</h4>
+        <p>Oyunlaştırma, multiplayer ve AI stüdyo. Babbel 15 EUR/ay iken biz £9.99/ay. Daha uygun, daha eğlenceli.</p>
+      </div>
+      <div class="advantage-item">
+        <h4>Diğerlerine karşı</h4>
+        <p>Kurumsal modül (sınıf + öğretmen paneli + AI quiz üretimi). Hiçbir rakibin sunmadığı özellik seti.</p>
+      </div>
+    </div>
+  </div>
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">6</span>
+</div>
+
+<!-- PAGE 7: REVENUE -->
+<div class="page" id="page-7">
+  <h2 class="section-title">Gelir Modeli</h2>
+  <div class="section-line"></div>
+
+  <h3 class="section-title-sm">Abonelik Planları</h3>
+
+  <div class="pricing-three">
+    <div class="plan-card">
+      <h4>Free</h4>
+      <div class="price">0</div>
+      <div class="price-note">Ücretsiz, giriş seviyesi</div>
+      <ul>
+        <li>Günde 5 kalp</li>
+        <li>1 ünite erişim</li>
+        <li>Temel etkinlikler</li>
+        <li>AI ile 3 soru hazırlama</li>
+      </ul>
+    </div>
+    <div class="plan-card featured">
+      <h4>Kişisel</h4>
+      <div class="price">Belirlenecek</div>
+      <div class="price-note">aylık / yıllık abonelik</div>
+      <ul>
+        <li>Sınırsız kalp</li>
+        <li>Tüm üniteler açık</li>
+        <li>Tüm etkinlik türleri</li>
+        <li>İstatistik ve rozetler</li>
+        <li>AI ile sınırsız soru hazırlama</li>
+      </ul>
+    </div>
+    <div class="plan-card">
+      <h4>Kurumsal / Okullar</h4>
+      <div class="price">Müzakere</div>
+      <div class="price-note">okul/kurum bazlı fiyatlandırma</div>
+      <ul>
+        <li>Öğretmen paneli ve sınıf yönetimi</li>
+        <li>Öğrenci raporları ve takip</li>
+        <li>Kahoot canlı quiz</li>
+        <li>AI İçerik Stüdyosu</li>
+        <li>Öncelikli destek</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);text-align:center;margin-bottom:0.75rem;">Not: Her paketin içerikleri ve kullanıcılara sunulacak özellikler ihtiyaca göre şekillenecektir.</p>
+
+  <div class="revenue-note" style="border-left:3px solid var(--tertiary);">
+    <strong>Kurumsal satış modeli:</strong> Kurum, öğrencileri için kullanmak istediği kitabı belirleyerek toplu lisans (örn. 50 adet) satın alır. Öğretmenler sistem üzerinden sınıf oluşturup öğrenci ekledikçe, kullanılan lisans sayısı toplam bakiyeden düşülür. Sisteme eklenen bir öğrenci kaydı sonradan silinemez, yalnızca kayıt üzerinde düzenleme yapılabilir. Demo sürecinin tamamlanmasının ardından tüm satışlar bu işleyişe uygun olarak gerçekleştirilecektir. Ödeme: havale veya site üzerinden.
+  </div>
+
+  <h3 class="section-title-sm">Sisteme Davet ve Öğrenci Kayıt İşlemleri</h3>
+
+  <div class="card" style="margin-bottom:1.5rem;">
+    <ul>
+      <li><strong>Öğretmen Davetleri:</strong> Kurumdaki bir öğretmen, diğer meslektaşlarının hesap oluşturabilmesi için WhatsApp üzerinden hızlıca davetiye bağlantısı gönderebilir.</li>
+      <li><strong>Toplu ve E-postasız Öğrenci Kaydı:</strong> Öğrenciler için e-posta adresi zorunluluğu bulunmamaktadır; sisteme kolaylıkla ve toplu olarak eklenebilirler.</li>
+      <li><strong>QR Kod ile Pratik Giriş:</strong> Sisteme girişleri hızlandırmak amacıyla, her öğrenciye özel QR kod içeren bir PDF belgesi oluşturulur.</li>
+      <li><strong>Avantajı:</strong> Bu sistem hem kurum temsilcisinin hem de öğretmenlerin operasyonel iş yükünü büyük ölçüde hafifletir. Öğrenciler de telefon veya tabletlerinin kameralarını kullanarak kendi sınıflarına sorunsuzca giriş yapmış olurlar.</li>
+    </ul>
+  </div>
+
+  <h3 class="section-title-sm">Yönetim Paneli (Admin)</h3>
+
+  <div class="card" style="margin-bottom:1.5rem;">
+    <ul>
+      <li><strong>Dashboard:</strong> Dünya haritası üzerinde anlık kullanıcı dağılımı, etkinlik istatistikleri ve online kullanıcılar tek ekranda.</li>
+      <li><strong>Liste + Hızlı Düzenleme:</strong> Tüm kayıtlar listelenir, listedeyken doğrudan düzenleme yapılabilir — ayrı sayfaya gitmeye gerek kalmaz.</li>
+      <li><strong>İçerik Yönetimi:</strong> Ders kitapları, üniteler, etkinlikler ve sorular — hepsi tek panelden eklenir, düzenlenir, sıralanır.</li>
+      <li><strong>Kullanıcı Yönetimi:</strong> Öğrenci ve öğretmen kayıtları, ülkeye/kuruma/sınıfa göre filtreleme, şifre sıfırlama, aktif/pasif durumu.</li>
+      <li><strong>Kurum ve Sınıf Yönetimi:</strong> Okul/kurum ekleme, sınıf oluşturma, öğretmen atama, kitap ve ünite yetkilendirme.</li>
+      <li><strong>Rol Tabanlı Yetkilendirme:</strong> Her kullanıcı tipine özel izinler — kim hangi bölüme erişebilecek tek tek belirlenir.</li>
+      <li><strong>Çoklu Dil Desteği:</strong> İçerikler farklı dillerde yayınlanabilir, her dil için ayrı çeviri girişi panel üzerinden yapılır.</li>
+      <li><strong>Raporlama:</strong> Kullanıcı istatistikleri, etkinlik geçmişi, ülke bazlı grafikler ve log raporları.</li>
+    </ul>
+  </div>
+
+  <h3 class="section-title-sm">Sınıf Isı Haritası (Heatmap)</h3>
+
+  <div class="card" style="margin-bottom:1.5rem;">
+    <ul>
+      <li><strong>Öğretmene sağlar:</strong> Kendi sınıfındaki öğrencilerin etkinlik yoğunluğunu, kimin ne kadar ilerlediğini, hangi ünite veya etkinlik türünde yığılma olduğunu görsel olarak görür. Zorlanan öğrencileri anında fark eder, müdahale eder.</li>
+      <li><strong>Öğrenciye sağlar:</strong> Kendi performansının sınıf içindeki yerini görür, hangi konularda geride olduğunu fark eder ve çalışmasını ona göre yönlendirir.</li>
+    </ul>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">7</span>
+</div>
+
+<!-- PAGE 8: TIMELINE -->
+<div class="page" id="page-8">
+  <h2 class="section-title">Yol Haritası</h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Platformun geliştirme takvimi, mevcut durumdan gelecek vizyonuna kadar altı ana aşamada planlanmıştır.</p>
+
+  <div style="margin-bottom:1rem;">
+    <div style="display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);border-left:3px solid var(--primary);">
+      <div style="flex-shrink:0;">
+        <div style="width:0.6rem;height:0.6rem;border-radius:9999px;background:var(--primary);margin-top:0.35rem;"></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--primary);margin-bottom:0.1rem;">Mayıs 2026 — Bugün</div>
+        <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 0–1: Altyapı ve API Tamamlandı</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">İçerik MySQL'e taşındı. API çalışıyor: auth, gamification, kurumsal modül, AI stüdyo. 25 veritabanı tablosu, 50 endpoint.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Auth</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">API</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Gamification</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Kurumsal Modül</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">AI Stüdyo</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);border-left:3px solid var(--secondary-container);">
+      <div style="flex-shrink:0;">
+        <div style="width:0.6rem;height:0.6rem;border-radius:9999px;background:var(--secondary-container);margin-top:0.35rem;"></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--secondary-container);margin-bottom:0.1rem;">Haziran 2026</div>
+        <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 2: Web MVP ve Ödeme Altyapısı</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">13 etkinlik türü çalışıyor. Ödeme sistemi entegrasyonu, sosyal giriş (Google, Apple), Kahoot canlı oyun, kalan etkinlik türleri ve Redis cache eklenecek.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Ödeme Sistemi</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Sosyal Giriş</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Kahoot Canlı</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Redis</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);border-left:3px solid var(--tertiary);">
+      <div style="flex-shrink:0;">
+        <div style="width:0.6rem;height:0.6rem;border-radius:9999px;background:var(--tertiary);margin-top:0.35rem;"></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--tertiary);margin-bottom:0.1rem;">Temmuz – Eylül 2026</div>
+        <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 2.5: Kapalı Beta ve Canlı Test</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">Belirli kullanıcılar için pilot uygulama. 1v1 Düello multiplayer, yeni etkinlik türleri, Stripe entegrasyonu. Geri bildirim toplama, hata düzeltme ve performans iyileştirmeleri.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">1v1 Düello</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Pilot Uygulama</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Canlı Test</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Geri Bildirim</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:1.25rem;margin-bottom:1.25rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);border-left:3px solid var(--primary);">
+      <div style="flex-shrink:0;">
+        <div style="width:0.6rem;height:0.6rem;border-radius:9999px;background:var(--primary);margin-top:0.35rem;"></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--primary);margin-bottom:0.1rem;">Ekim – Aralık 2026</div>
+        <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 3: Mobil Uygulama ve Açık Beta</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">React Native ile iOS ve Android. Açık beta süreci, web ile ortak tipler, offline mod, push notification, biyometrik giriş ve mobil-first deneyim.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">iOS</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Android</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Açık Beta</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Offline Mod</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:flex-start;gap:1.25rem;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);border-left:3px solid var(--outline);">
+      <div style="flex-shrink:0;">
+        <div style="width:0.6rem;height:0.6rem;border-radius:9999px;background:var(--on-surface-variant);margin-top:0.35rem;"></div>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--on-surface-variant);margin-bottom:0.1rem;">2027</div>
+        <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 4: Büyüme ve Ölçeklenme</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">AI konuşma partneri (DiyalogYap), yeni diller, ülke temsilcilikleri, platform şampiyonası, içerik çeşitlendirme ve küresel büyüme.</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:var(--surface-container);color:var(--on-surface-variant);">DiyalogYap</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:var(--surface-container);color:var(--on-surface-variant);">Yeni Diller</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:var(--surface-container);color:var(--on-surface-variant);">Şampiyona</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:var(--surface-container);color:var(--on-surface-variant);">Küresel Büyüme</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:12px;font-weight:400;line-height:18px;color:var(--on-surface-variant);text-align:center;max-width:480px;margin:0 auto 1rem auto;font-style:italic;">Not: Bu takvim, belirlenen çalışma şekli ve saat durumuna göre değişebilir, yeniden şekillenebilir.</p>
+
+  <div class="page-footer" style="display:flex;justify-content:space-between;border:none;padding:0;margin:0;">
+    
+    <span class="page-number" style="position:static;opacity:1;">8</span>
+  </div>
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+</div>
+
+<!-- PAGE 9: UI COMPONENTS -->
+<div class="page" id="page-9">
+  <h2 class="section-title">Kurumsal Kimlik</h2>
+  <div class="section-line"></div>
+
+  <h3 class="section-title-sm">Butonlar</h3>
+  <div class="btn-group">
+    <span class="btn btn-primary">Birincil İşlem</span>
+    <span class="btn btn-ghost">İkincil İşlem</span>
+    <span class="btn btn-destructive">Sil</span>
+    <span class="btn btn-success">Onayla</span>
+    <span class="btn btn-warning">Uyarı</span>
+    <span class="btn btn-disabled">Pasif</span>
+  </div>
+
+  <div class="table-wrap" style="margin-bottom:1.5rem;">
+    <table class="stack-table">
+      <thead>
+        <tr><th>Stil</th><th>Kullanım</th><th>Arka Plan</th><th>Yazı</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Primary</td><td>Ana aksiyonlar, ilerleme</td><td>#1B75BC</td><td>Beyaz</td></tr>
+        <tr><td>Ghost</td><td>İkincil işlemler</td><td>Şeffaf / hover: #DBEAFE</td><td>#1B75BC</td></tr>
+        <tr><td>Destructive</td><td>Silme, geri alınamaz</td><td>#DC2626</td><td>Beyaz</td></tr>
+        <tr><td>Success</td><td>Tamamlama onayı</td><td>#16A34A</td><td>Beyaz</td></tr>
+        <tr><td>Warning</td><td>Kalp harcama, ihtiyat</td><td>#D97706</td><td>Beyaz</td></tr>
+        <tr><td>Disabled</td><td>Pasif durum</td><td>#E5E7EB</td><td>#9CA3AF</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Kart Bileşeni</h3>
+      <div class="product-card-icon feature" style="margin-bottom:0.75rem;">K</div>
+      <h4 style="font-size:16px;font-weight:600;line-height:24px;margin-bottom:0.25rem;color:var(--on-surface);">Kart Bileşeni</h4>
+      <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.75rem;">Başlık, açıklama metni ve aksiyon butonu içeren standart kart bileşeni.</p>
+      <span class="btn btn-primary" style="padding:0.4rem 0.9rem;font-size:13px;">İncele</span>
+    </div>
+
+    <div class="card">
+      <h3>Input Alanı</h3>
+      <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.5rem;">Varsayılan durum:</p>
+      <input class="input-sample" type="text" placeholder="Türkçe kelime girin..." readonly style="margin-bottom:0.5rem;pointer-events:none;">
+      <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.5rem;">Odaklanmış durum (focus):</p>
+      <input class="input-sample" type="text" placeholder="Türkçe kelime girin..." value="Merhaba" readonly style="pointer-events:none;border-color:var(--primary);box-shadow:0 0 0 4px rgba(27,117,188,0.15);">
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">Etkinlik Geribildirim Bannerları</h3>
+  <div class="banner banner-correct">
+    <span style="font-weight:700;color:var(--feedback-correct);flex-shrink:0;">✓</span>
+    <span>Doğru cevap! 10 XP kazandınız.</span>
+  </div>
+  <div class="banner banner-wrong">
+    <span style="font-weight:700;color:var(--feedback-wrong);flex-shrink:0;">✗</span>
+    <span>Yanlış cevap. Doğrusu: "merhaba"</span>
+  </div>
+  <div class="banner banner-hint">
+    <span style="font-weight:700;color:var(--feedback-hint);flex-shrink:0;">AI</span>
+    <span>İpucu: Bu kelime bir selamlaşma ifadesidir.</span>
+  </div>
+  <div class="banner banner-timeout">
+    <span style="font-weight:700;color:var(--feedback-timeout);flex-shrink:0;">!</span>
+    <span>Süreniz doldu. Bir sonraki soruya geçiliyor.</span>
+  </div>
+
+  <h3 class="section-title-sm" style="margin-top:1.25rem;">Etkinlik Türleri</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;">
+    <div class="activity-tag"><div class="activity-dot" style="background:#1b75bc;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Çoktan Seçmeli</div><div style="font-size:11px;color:var(--on-surface-variant);">4 seçenekli klasik test</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#ea580c;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Quiz</div><div style="font-size:11px;color:var(--on-surface-variant);">Süreli bilgi yarışması</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#0d9488;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Kelime Eşleştirme</div><div style="font-size:11px;color:var(--on-surface-variant);">Kelime-anlam çiftleri</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#7c3aed;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Akıllı Kart</div><div style="font-size:11px;color:var(--on-surface-variant);">Aralıklı tekrar kartları</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#e11d48;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Resim+Ses</div><div style="font-size:11px;color:var(--on-surface-variant);">Görsel ve işitsel eşleştirme</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#1d4ed8;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Boşluk Doldurma</div><div style="font-size:11px;color:var(--on-surface-variant);">Metin içinde boşluk</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#16a34a;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Kelimeden Cümle</div><div style="font-size:11px;color:var(--on-surface-variant);">Karışık kelimelerden cümle</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#d97706;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Sesi Dinle Yaz</div><div style="font-size:11px;color:var(--on-surface-variant);">Duyduğunu yazma</div></div></div>
+    <div class="activity-tag"><div class="activity-dot" style="background:#4f46e5;"></div><div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Hafıza Oyunu</div><div style="font-size:11px;color:var(--on-surface-variant);">Kart eşleştirme oyunu</div></div></div>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">9</span>
+</div>
+
+<!-- PAGE 10: OYUNLASTIRMA VE ETKINLIK RENKLERI -->
+<div class="page" id="page-10">
+  <h2 class="section-title">Oyunlaştırma UI Bileşenleri</h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Her oyunlaştırma öğesi ve etkinlik tipinin sabit bir rengi vardır. Bu renkler görsel kas hafızası oluşturmak için tutarlı kullanılır.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <h3>Oyunlaştırma Renkleri</h3>
+      <div class="swatch-row">
+        <div class="swatch"><div class="swatch-color" style="background:#ef4444;"></div><div class="swatch-label">heart<br><span class="color-hex">#EF4444</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#fca5a5;"></div><div class="swatch-label">heart-lost<br><span class="color-hex">#FCA5A5</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#f97316;"></div><div class="swatch-label">streak<br><span class="color-hex">#F97316</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#fff7ed;"></div><div class="swatch-label">streak-bg<br><span class="color-hex">#FFF7ED</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#eab308;"></div><div class="swatch-label">coin<br><span class="color-hex">#EAB308</span></div></div>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><div class="swatch-color" style="background:#fefce8;"></div><div class="swatch-label">coin-bg<br><span class="color-hex">#FEFCE8</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#1b75bc;"></div><div class="swatch-label">XP<br><span class="color-hex">#1B75BC</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#0d9488;"></div><div class="swatch-label">combo-2x<br><span class="color-hex">#0D9488</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#7c3aed;"></div><div class="swatch-label">combo-3x<br><span class="color-hex">#7C3AED</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#ea580c;"></div><div class="swatch-label">combo-5x<br><span class="color-hex">#EA580C</span></div></div>
+      </div>
+      <div class="swatch-row" style="margin-bottom:0;">
+        <div class="swatch"><div class="swatch-color" style="background:#dc2626;"></div><div class="swatch-label">combo-10x<br><span class="color-hex">#DC2626</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#a16207;"></div><div class="swatch-label">league-bronze<br><span class="color-hex">#A16207</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#6b7280;"></div><div class="swatch-label">league-silver<br><span class="color-hex">#6B7280</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#eab308;"></div><div class="swatch-label">league-gold<br><span class="color-hex">#EAB308</span></div></div>
+        <div class="swatch"><div class="swatch-color" style="background:#9333ea;"></div><div class="swatch-label">league-crown<br><span class="color-hex">#9333EA</span></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Combo Çarpanları</h3>
+      <p style="margin-bottom:0.75rem;">Doğru cevaplarda artan combo zinciri:</p>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.4rem 0.75rem;border-radius:var(--radius-sm);background:var(--surface-container-low);">
+          <span style="font-weight:700;color:var(--combo-2x);font-size:18px;">2×</span>
+          <span style="font-size:13px;color:var(--on-surface-variant);">2 ardışık doğru</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.4rem 0.75rem;border-radius:var(--radius-sm);background:var(--surface-container-low);">
+          <span style="font-weight:700;color:var(--combo-3x);font-size:18px;">3×</span>
+          <span style="font-size:13px;color:var(--on-surface-variant);">5 ardışık doğru</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.4rem 0.75rem;border-radius:var(--radius-sm);background:var(--surface-container-low);">
+          <span style="font-weight:700;color:var(--combo-5x);font-size:18px;">5×</span>
+          <span style="font-size:13px;color:var(--on-surface-variant);">10 ardışık doğru</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.4rem 0.75rem;border-radius:var(--radius-sm);background:var(--surface-container-low);">
+          <span style="font-weight:700;color:var(--combo-10x);font-size:18px;">10×</span>
+          <span style="font-size:13px;color:var(--on-surface-variant);">20 ardışık doğru</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">Etkinlik Tipi Renkleri</h3>
+  <div class="grid-4">
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#1b75bc;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Çoktan Seçmeli</div><div style="font-size:10px;color:var(--on-surface-variant);">#1B75BC</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#ea580c;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Quiz</div><div style="font-size:10px;color:var(--on-surface-variant);">#EA580C</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#0d9488;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Eşleştir</div><div style="font-size:10px;color:var(--on-surface-variant);">#0D9488</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#7c3aed;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Akıllı Kart</div><div style="font-size:10px;color:var(--on-surface-variant);">#7C3AED</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#e11d48;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Resim+Ses</div><div style="font-size:10px;color:var(--on-surface-variant);">#E11D48</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#1d4ed8;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Boşluk Doldurma</div><div style="font-size:10px;color:var(--on-surface-variant);">#1D4ED8</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#16a34a;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Kelimeden Cümle</div><div style="font-size:10px;color:var(--on-surface-variant);">#16A34A</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#d97706;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Sesi Dinle Yaz</div><div style="font-size:10px;color:var(--on-surface-variant);">#D97706</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.5rem;padding:0.5rem;background:var(--surface-container-low);border-radius:var(--radius-sm);">
+      <div style="width:0.75rem;height:0.75rem;border-radius:var(--radius-sm);background:#4f46e5;flex-shrink:0;"></div>
+      <div><div style="font-size:12px;font-weight:600;color:var(--on-surface);">Hafıza Oyunu</div><div style="font-size:10px;color:var(--on-surface-variant);">#4F46E5</div></div>
+    </div>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+<span class="page-number">10</span>
+</div>
+
+<!-- PAGE 11: SCREENSHOTS -->
+<div class="page" id="page-11">
+  <h2 class="section-title">Eski ve Yeni Sistem Karşılaştırması</h2>
+  <div class="section-line"></div>
+  <p class="section-desc">Aşağıda eski (ASP.NET 4.5) ve yeni (ASP.NET Core 8 + Next.js 15) sistemin ekran görüntüleri yer almaktadır. Görsellere tıklayarak büyütebilirsiniz.</p>
+
+  <div class="compare-section">
+    <div class="compare-category-title">Mobil</div>
+    <div class="compare-side">
+      <div class="compare-side-label">Eski Sistem <span class="badge-eski">3 görsel</span></div>
+      <div class="compare-grid">
+        <div class="screen-thumb" onclick="openLightbox(0)"><img src="eski/2026-05-14_203124.jpg" alt="Eski mobil 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(1)"><img src="eski/2026-05-14_203210.jpg" alt="Eski mobil 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(2)"><img src="eski/2026-05-14_204050.jpg" alt="Eski mobil 3" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="compare-side">
+      <div class="compare-side-label">Yeni Sistem <span class="badge-yeni">4 görsel</span></div>
+      <div class="compare-grid">
+        <div class="screen-thumb" onclick="openLightbox(3)"><img src="yeni/2026-05-14_204018.jpg" alt="Yeni mobil 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(4)"><img src="yeni/2026-05-14_203917.jpg" alt="Yeni mobil 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(5)"><img src="yeni/2026-05-14_203733.jpg" alt="Yeni mobil 3" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(6)"><img src="yeni/2026-05-14_203656.jpg" alt="Yeni mobil 4" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-section">
+    <div class="compare-category-title">Web</div>
+    <div class="compare-side">
+      <div class="compare-side-label">Eski Sistem <span class="badge-eski">2 görsel</span></div>
+      <div class="compare-grid">
+        <div class="screen-thumb" onclick="openLightbox(7)"><img src="eski/2026-05-14_203036.jpg" alt="Eski web 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(8)"><img src="eski/2026-05-14_203828.jpg" alt="Eski web 2" loading="lazy"></div>
+      </div>
+    </div>
+    <div class="compare-side">
+      <div class="compare-side-label">Yeni Sistem <span class="badge-yeni">8 görsel</span></div>
+      <div class="compare-grid">
+        <div class="screen-thumb" onclick="openLightbox(9)"><img src="yeni/2026-05-14_204920.jpg" alt="Yeni web 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(10)"><img src="yeni/2026-05-14_204512.jpg" alt="Yeni web 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(11)"><img src="yeni/2026-05-14_204243.jpg" alt="Yeni web 3" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(12)"><img src="yeni/2026-05-14_204224.jpg" alt="Yeni web 4" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(13)"><img src="yeni/2026-05-14_203630.jpg" alt="Yeni web 5" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(14)"><img src="yeni/2026-05-14_203536.jpg" alt="Yeni web 6" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(15)"><img src="yeni/2026-05-14_203514.jpg" alt="Yeni web 7" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(16)"><img src="yeni/2026-05-14_203455.jpg" alt="Yeni web 8" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+  <span class="page-number">11</span>
+</div>
+
+<!-- PAGE 12: FİYAT TEKLİFİ -->
+<div class="page" id="page-12">
+  <h2 class="section-title">Yazılım Geliştirme Teklifi</h2>
+  <div class="section-line"></div>
+
+  <div style="display:flex;justify-content:space-between;margin-bottom:1.5rem;font-size:13px;color:var(--on-surface-variant);">
+    <div><strong style="color:var(--on-surface);">Teklif No:</strong> TK-2026-001<br><strong style="color:var(--on-surface);">Tarih:</strong> Mayıs 2026</div>
+    <div style="text-align:right;"><strong style="color:var(--on-surface);">Hazırlayan:</strong> Opera Labs / fg<br><strong style="color:var(--on-surface);">Müşteri:</strong> Türkçe Okulu</div>
+  </div>
+
+  <div class="callout" style="margin-bottom:1.25rem;">
+    <div class="callout-marker">i</div>
+    <p>Bu teklif, Türkçe Okulu platformunun modernizasyonu için bugüne kadar yapılan çalışmaları ve bundan sonraki sürekli geliştirme modelini kapsar. Tüm geliştirme çalışmaları <strong>Opera Labs</strong> bünyesinde yürütülmektedir.</p>
+  </div>
+
+  <h3 class="section-title-sm">1. İlk Aşama — Tamamlanan Çalışmalar</h3>
+  <div class="card" style="margin-bottom:1.25rem;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.75rem;">
+      <div>
+        <div style="font-size:16px;font-weight:700;color:var(--on-surface);">4.000 EUR</div>
+        <div style="font-size:12px;color:var(--on-surface-variant);">1 Mayıs 2026 itibarıyla · 50 saat üzeri</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:12px;font-weight:600;color:var(--primary);">✓ Tamamlandı</div>
+      </div>
+    </div>
+    <ul style="margin:0;padding-left:1.25rem;font-size:13px;line-height:22px;color:var(--on-surface-variant);">
+      <li>Eski sistem (ASP.NET 4.5) kod tabanının incelenmesi ve mimari analiz</li>
+      <li>MySQL veritabanı kurulumu, eski içeriğin taşınması, gereksiz verilerin temizlenmesi</li>
+      <li>Eski yapının yeni sisteme (ASP.NET Core 8 + Next.js 15) aktarılması</li>
+      <li>Mevcut etkinlik tiplerinin eski sistemle karşılaştırılması, eksikliklerin tespiti ve pedagojik olarak en iyi şekilde modernize edilmesi (gerekirse yeniden tasarlanması)</li>
+      <li>Tasarım sisteminin oluşturulması ve arayüz bileşenlerinin geliştirilmesi</li>
+      <li>Olmayan özelliklerin (gamification, multiplayer, AI stüdyo) altyapısının kurulması</li>
+      <li>Yapay zeka (Claude API) entegrasyonu ve testleri</li>
+    </ul>
+    <div style="font-size:11px;color:var(--on-surface-variant);line-height:16px;margin-top:0.75rem;padding:0.6rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);">
+      Tüm bu çalışmalar; Türkçe eğitimi yayıncılığı deneyimi, dijital eğitim ve içerik üretimi uygunluğu, test otomasyonu ve ürün yönetimi (PO) perspektiflerinden denetlenerek yürütülmüştür. Amaç sadece teknik bir modernizasyon değil, pedagojik temellere dayanan kapsamlı bir ürün ortaya koymaktır.
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">2. Sürekli Geliştirme Modeli</h3>
+  <div class="two-col" style="margin-bottom:0;">
+    <div class="card">
+      <div style="font-size:13px;color:var(--on-surface-variant);margin-bottom:0.25rem;">Aylık Çalışma</div>
+      <div style="font-size:24px;font-weight:800;color:var(--on-surface);">40 saat</div>
+      <div style="font-size:12px;color:var(--on-surface-variant);">Haftalık 10 saat × 4 hafta</div>
+    </div>
+    <div class="card" style="border-color:var(--primary);border-width:2px;">
+      <div style="font-size:13px;color:var(--on-surface-variant);margin-bottom:0.25rem;">Aylık Ücret</div>
+      <div style="font-size:24px;font-weight:800;color:var(--primary);">2.000 EUR</div>
+      <div style="font-size:12px;color:var(--on-surface-variant);">50 EUR / saat</div>
+    </div>
+  </div>
+
+  <div style="font-size:12px;color:var(--on-surface-variant);line-height:18px;padding:0.75rem 1rem;background:var(--surface-container-low);border-radius:var(--radius-md);">
+    <strong style="color:var(--on-surface);">Çalışma Modeli:</strong> Haftalık 10 saat aktif geliştirme. Acil durumlar ve deploy süreçleri çalışma saatine dahildir. Proje yönetimi ClickUp/Trello üzerinden yürütülür; planlanan, yapılan ve kalan işler şeffaf şekilde takip edilebilir.
+  </div>
+  <div style="font-size:11px;color:var(--on-surface-variant);line-height:16px;margin-top:0.4rem;padding:0.5rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);font-style:italic;">
+    Not: Sunucu masrafları ve AI model (Claude API) ücretleri bu teklife dahil değildir.
+  </div>
+
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+  <span class="page-number">12</span>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav prev" onclick="prevImage()">‹</button>
+  <button class="lightbox-nav next" onclick="nextImage()">›</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<script>
+var lightboxImages = [
+  'eski/2026-05-14_203124.jpg',
+  'eski/2026-05-14_203210.jpg',
+  'eski/2026-05-14_204050.jpg',
+  'yeni/2026-05-14_204018.jpg',
+  'yeni/2026-05-14_203917.jpg',
+  'yeni/2026-05-14_203733.jpg',
+  'yeni/2026-05-14_203656.jpg',
+  'eski/2026-05-14_203036.jpg',
+  'eski/2026-05-14_203828.jpg',
+  'yeni/2026-05-14_204920.jpg',
+  'yeni/2026-05-14_204512.jpg',
+  'yeni/2026-05-14_204243.jpg',
+  'yeni/2026-05-14_204224.jpg',
+  'yeni/2026-05-14_203630.jpg',
+  'yeni/2026-05-14_203536.jpg',
+  'yeni/2026-05-14_203514.jpg',
+  'yeni/2026-05-14_203455.jpg'
+];
+var lightboxIndex = 0;
+
+function openLightbox(index) {
+  lightboxIndex = index;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('active');
+}
+
+function updateLightbox() {
+  document.getElementById('lightbox-img').src = lightboxImages[lightboxIndex];
+  document.getElementById('lightbox-counter').textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
+}
+
+function prevImage() {
+  lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length;
+  updateLightbox();
+}
+
+function nextImage() {
+  lightboxIndex = (lightboxIndex + 1) % lightboxImages.length;
+  updateLightbox();
+}
+
+function closeLightbox(e) {
+  if (!e || e.target === e.currentTarget || e.target.classList.contains('lightbox-close')) {
+    document.getElementById('lightbox').classList.remove('active');
+  }
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') prevImage();
+  if (e.key === 'ArrowRight') nextImage();
+});
+</script>
+
+</body>
+</html>
