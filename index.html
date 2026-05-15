@@ -841,7 +841,7 @@
   .compare-side {
     background: var(--surface-container-low);
     border-radius: var(--radius-md);
-    padding: 0.6rem 0.75rem;
+    padding: 0.75rem;
     border: 1px solid var(--border-color);
   }
   .compare-side + .compare-side { margin-top: 0.6rem; }
@@ -856,8 +856,8 @@
   }
   .compare-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
-    gap: 0.35rem;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.4rem;
   }
   .compare-grid .screen-thumb {
     aspect-ratio: 16/11;
@@ -1169,7 +1169,8 @@ function updateToggle() {
   <h1 class="cover-title">Türkçe Öğreniminin<br><em>Geleceği</em></h1>
 
   <p class="cover-sub">
-    Türkçe Okulu Platformu Modernizasyon ve Geliştirme Teklifi — 13 yıllık içerik birikimi, 54.000+ kayıtlı öğrenci ve kurumsal altyapı; modern pedagojik araçlar ve yapay zeka destekli modüllerle yeniden yapılandırılmaktadır.
+    Hedefimiz; 13 yıllık içerik mirasını ve 54.000'den fazla kullanıcının dahil olduğu bu ekosistemi; yapay zeka
+    destekli modüller ve modern pedagojik araçlar eşliğinde yeni bir altyapıya taşıyıp modernize etmek.
   </p>
 
   <div class="cover-line"></div>
@@ -1211,7 +1212,7 @@ function updateToggle() {
     </a>
     <a href="#page-4" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
       <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">4</span>
-      <div><div style="font-weight:600;">AI İçerik Stüdyosu</div><div style="font-size:13px;color:var(--on-surface-variant);">Claude API ile 7 tür içerik üretimi</div></div>
+      <div><div style="font-weight:600;">AI İçerik Stüdyosu</div><div style="font-size:13px;color:var(--on-surface-variant);">AI ile 7 tür içerik üretimi</div></div>
     </a>
     <a href="#page-5" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
       <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">5</span>
@@ -1258,7 +1259,7 @@ function updateToggle() {
 
   <div class="callout">
     <div class="callout-marker">i</div>
-    <p><strong>MVP'nin %70'i tamamlandı.</strong> API (ASP.NET Core 8) ve Web (Next.js 15) ayakta. 50'den fazla API endpoint, 13 etkinlik oynatıcı, kurumsal paneller ve AI stüdyo çalışır durumda.</p>
+    <p><strong>MVP'nin %70'i tamamlandı.</strong> API (ASP.NET Core 8) ve Web (Next.js 15) ayakta. 50'den fazla API endpoint, kurumsal paneller ve AI stüdyo çalışır durumda. 20 etkinlik türünden 5'inin oynatıcısı tamamlandı, kalan türler geliştirme aşamasında.</p>
   </div>
 
   <div class="product-grid">
@@ -1271,7 +1272,7 @@ function updateToggle() {
     <div class="product-card">
       <div class="product-card-icon ai">AI</div>
       <h4>AI İçerik Stüdyosu</h4>
-      <p>Claude API ile 30 saniyede quiz, çalışma kâğıdı ve konuşma egzersizi üretimi. 7 tür içerik.</p>
+      <p>AI destekli 30 saniyede quiz, çalışma kâğıdı ve konuşma egzersizi üretimi. 7 tür içerik.</p>
       <span class="tag tag-live">Çalışıyor</span>
     </div>
     <div class="product-card">
@@ -1310,7 +1311,7 @@ function updateToggle() {
         <tr><td>Web Frontend</td><td>Next.js 15 + TypeScript + Tailwind</td><td class="status-yes">Çalışıyor</td></tr>
         <tr><td>Gerçek Zamanlı</td><td>SignalR WebSocket</td><td class="status-yes">Çalışıyor</td></tr>
         <tr><td>Auth</td><td>JWT + Refresh Token + PIN + QR</td><td class="status-yes">Çalışıyor</td></tr>
-        <tr><td>AI İçerik</td><td>Claude API + Word Export</td><td class="status-yes">Çalışıyor</td></tr>
+        <tr><td>AI İçerik</td><td>AI Model + Word Export</td><td class="status-yes">Çalışıyor</td></tr>
         <tr><td>Sosyal Giriş</td><td>Google + Apple</td><td class="status-no">Ertelendi</td></tr>
         <tr><td>Ödeme</td><td>Stripe</td><td class="status-no">Sırada</td></tr>
         <tr><td>Mobil</td><td>React Native + Expo</td><td class="status-no">Faz 3</td></tr>
@@ -1328,11 +1329,14 @@ function updateToggle() {
 
   <div class="callout">
     <div class="callout-marker">AI</div>
-    <p><strong>Öğretmenler için yapay zeka destekli içerik üretim platformu.</strong> Claude API (claude-sonnet-4-6) ile 30 saniyede quiz, çalışma kâğıdı, konuşma egzersizi ve daha fazlası. Sadece öğretmenlere özel, pedagojik olarak doğru içerik üretimi.</p>
+    <p><strong>Öğretmenler için yapay zeka destekli içerik üretim platformu.</strong> Belirlenen bir yapay zeka modeli ile 30 saniyede quiz, çalışma kâğıdı, konuşma egzersizi ve daha fazlası. Resim ve metin için birden çok model eklenebilir. Sadece öğretmenlere özel, pedagojik olarak doğru içerik üretimi.</p>
   </div>
 
   <h3 class="section-title-sm">7 Tür İçerik</h3>
-  <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.75rem;">Yapay zeka modellerinin çıktı tutarlılığı içerik türüne göre farklılık gösterebildiğinden, yayına alınacak içerik türleri kapsamlı test ve pedagojik değerlendirmeler neticesinde belirlenecektir. En güvenilir ve tutarlı sonuçlar veren türler öncelikli olarak etkinleştirilecek; diğerleri görüşmeler ve testler doğrultusunda kademeli olarak değerlendirilebilir.</p>
+  <div style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.75rem 1rem;background:var(--feedback-hint-bg);border-left:3px solid var(--feedback-hint);border-radius:var(--radius-md);margin-bottom:1rem;">
+    <div style="font-size:16px;font-weight:700;color:var(--feedback-hint);flex-shrink:0;line-height:1.3;">!</div>
+    <p style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface);margin:0;">Yapay zeka modellerinin çıktı tutarlılığı içerik türüne göre farklılık gösterebildiğinden, yayına alınacak içerik türleri kapsamlı test ve pedagojik değerlendirmeler neticesinde belirlenecektir. En güvenilir ve tutarlı sonuçlar veren türler öncelikli olarak etkinleştirilecek; diğerleri görüşmeler ve testler doğrultusunda kademeli olarak değerlendirilebilir.</p>
+  </div>
   <div class="product-grid">
     <div class="product-card">
       <div class="product-card-icon ai">Q</div>
@@ -1376,7 +1380,7 @@ function updateToggle() {
     <div class="card">
       <h3>Akıllı Üretim</h3>
       <ul>
-        <li>Claude Sonnet 4-6 ile 30 saniyede içerik</li>
+        <li>AI ile 30 saniyede içerik (testlerde Claude Sonnet/Haiku kullanıldı; daha güçlü bir model de kullanılabilir — sorgu başı ~$0.02)</li>
         <li>CEFR A1'den C2'ye tüm seviyeler</li>
         <li>Kaynak ünite seçimi — kitapla %100 uyumlu</li>
         <li>4 odak modu: Grammar, Culture, DailyLife, EasyToHard</li>
@@ -1912,21 +1916,24 @@ function updateToggle() {
   <div class="section-line"></div>
   <p class="section-desc">Aşağıda eski (ASP.NET 4.5) ve yeni (ASP.NET Core 8 + Next.js 15) sistemin ekran görüntüleri yer almaktadır. Görsellere tıklayarak büyütebilirsiniz.</p>
 
+  <p style="font-size:12px;font-weight:400;line-height:18px;color:var(--on-surface-variant);background:var(--surface-container);padding:0.5rem 0.75rem;border-radius:var(--radius-sm);margin-bottom:1rem;font-style:italic;">Not: Mobil ekran görüntüleri native bir uygulamaya ait değildir; web versiyonunun mobil cihazlarda responsive kullanımını göstermektedir.</p>
+
   <div class="compare-section">
     <div class="compare-category-title">Mobil</div>
     <div class="compare-side">
       <div class="compare-side-label">Eski Sistem <span class="badge-eski">3 görsel</span></div>
       <div class="compare-grid">
         <div class="screen-thumb" onclick="openLightbox(0)"><img src="eski/2026-05-14_203124.jpg" alt="Eski mobil 1" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(1)"><img src="eski/2026-05-14_203210.jpg" alt="Eski mobil 2" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(2)"><img src="eski/2026-05-14_204050.jpg" alt="Eski mobil 3" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(1)"><img src="eski/2026-05-14_204050.jpg" alt="Eski mobil 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(2)"><img src="eski/2026-05-14_203828.jpg" alt="Eski mobil 3" loading="lazy"></div>
       </div>
     </div>
     <div class="compare-side">
-      <div class="compare-side-label">Yeni Sistem <span class="badge-yeni">2 görsel</span></div>
+      <div class="compare-side-label">Yeni Sistem <span class="badge-yeni">3 görsel</span></div>
       <div class="compare-grid">
         <div class="screen-thumb" onclick="openLightbox(3)"><img src="yeni/2026-05-14_203733.jpg" alt="Yeni mobil 1" loading="lazy"></div>
         <div class="screen-thumb" onclick="openLightbox(4)"><img src="yeni/2026-05-14_203656.jpg" alt="Yeni mobil 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(5)"><img src="yeni/2026-05-14_211230.jpg" alt="Yeni mobil 3" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -1936,20 +1943,20 @@ function updateToggle() {
     <div class="compare-side">
       <div class="compare-side-label">Eski Sistem <span class="badge-eski">2 görsel</span></div>
       <div class="compare-grid">
-        <div class="screen-thumb" onclick="openLightbox(5)"><img src="eski/2026-05-14_203036.jpg" alt="Eski web 1" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(6)"><img src="eski/2026-05-14_203828.jpg" alt="Eski web 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(6)"><img src="eski/2026-05-14_203036.jpg" alt="Eski web 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(7)"><img src="eski/2026-05-14_203210.jpg" alt="Eski web 2" loading="lazy"></div>
       </div>
     </div>
     <div class="compare-side">
       <div class="compare-side-label">Yeni Sistem <span class="badge-yeni">7 görsel</span></div>
       <div class="compare-grid">
-        <div class="screen-thumb" onclick="openLightbox(7)"><img src="yeni/2026-05-14_204920.jpg" alt="Yeni web 1" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(8)"><img src="yeni/2026-05-14_204243.jpg" alt="Yeni web 2" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(9)"><img src="yeni/2026-05-14_204224.jpg" alt="Yeni web 3" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(10)"><img src="yeni/2026-05-14_203630.jpg" alt="Yeni web 4" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(11)"><img src="yeni/2026-05-14_203536.jpg" alt="Yeni web 5" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(12)"><img src="yeni/2026-05-14_203514.jpg" alt="Yeni web 6" loading="lazy"></div>
-        <div class="screen-thumb" onclick="openLightbox(13)"><img src="yeni/2026-05-14_203455.jpg" alt="Yeni web 7" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(8)"><img src="yeni/2026-05-14_204920.jpg" alt="Yeni web 1" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(9)"><img src="yeni/2026-05-14_204243.jpg" alt="Yeni web 2" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(10)"><img src="yeni/2026-05-14_204224.jpg" alt="Yeni web 3" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(11)"><img src="yeni/2026-05-14_203630.jpg" alt="Yeni web 4" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(12)"><img src="yeni/2026-05-14_203536.jpg" alt="Yeni web 5" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(13)"><img src="yeni/2026-05-14_203514.jpg" alt="Yeni web 6" loading="lazy"></div>
+        <div class="screen-thumb" onclick="openLightbox(14)"><img src="yeni/2026-05-14_203455.jpg" alt="Yeni web 7" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -1970,7 +1977,7 @@ function updateToggle() {
 
   <div class="callout" style="margin-bottom:1.25rem;">
     <div class="callout-marker">i</div>
-    <p>Bu teklif, Türkçe Okulu platformunun modernizasyonu için bugüne kadar yapılan çalışmaları ve bundan sonraki sürekli geliştirme modelini kapsar. Tüm geliştirme çalışmaları <strong>Opera Labs</strong> bünyesinde yürütülmektedir.</p>
+    <p>Bu teklif, Türkçe Okulu platformunun modernizasyonu için bugüne kadar yapılan çalışmaları ve bundan sonraki sürekli geliştirme modelini kapsar.</p>
   </div>
 
   <h3 class="section-title-sm">1. İlk Aşama — Tamamlanan Çalışmalar</h3>
@@ -1991,7 +1998,7 @@ function updateToggle() {
       <li>Mevcut etkinlik tiplerinin eski sistemle karşılaştırılması, eksikliklerin tespiti ve pedagojik olarak en iyi şekilde modernize edilmesi (gerekirse yeniden tasarlanması)</li>
       <li>Tasarım sisteminin oluşturulması ve arayüz bileşenlerinin geliştirilmesi</li>
       <li>Olmayan özelliklerin (gamification, multiplayer, AI stüdyo) altyapısının kurulması</li>
-      <li>Yapay zeka (Claude API) entegrasyonu ve testleri</li>
+      <li>Yapay zeka model entegrasyonu ve testleri</li>
     </ul>
     <div style="font-size:11px;color:var(--on-surface-variant);line-height:16px;margin-top:0.75rem;padding:0.6rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);">
       Tüm bu çalışmalar; Türkçe eğitimi yayıncılığı deneyimi, dijital eğitim ve içerik üretimi uygunluğu, test otomasyonu ve ürün yönetimi (PO) perspektiflerinden denetlenerek yürütülmüştür. Amaç sadece teknik bir modernizasyon değil, pedagojik temellere dayanan kapsamlı bir ürün ortaya koymaktır.
@@ -2016,7 +2023,7 @@ function updateToggle() {
     <strong style="color:var(--on-surface);">Çalışma Modeli:</strong> Haftalık 10 saat aktif geliştirme. Acil durumlar ve deploy süreçleri çalışma saatine dahildir. Proje yönetimi ClickUp/Trello üzerinden yürütülür; planlanan, yapılan ve kalan işler şeffaf şekilde takip edilebilir.
   </div>
   <div style="font-size:11px;color:var(--on-surface-variant);line-height:16px;margin-top:0.4rem;padding:0.5rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);font-style:italic;">
-    Not: Sunucu masrafları ve AI model (Claude API) ücretleri bu teklife dahil değildir.
+    Not: Sunucu masrafları ve AI model ücretleri bu teklife dahil değildir. Testlerde Claude Sonnet/Haiku kullanılmış olup sorgu başı ~$0.02 maliyet öngörülmektedir. İhtiyaca göre daha güçlü bir model de kullanılabilir.
   </div>
 
   <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
@@ -2034,12 +2041,13 @@ function updateToggle() {
 <script>
 var lightboxImages = [
   'eski/2026-05-14_203124.jpg',
-  'eski/2026-05-14_203210.jpg',
   'eski/2026-05-14_204050.jpg',
+  'eski/2026-05-14_203828.jpg',
   'yeni/2026-05-14_203733.jpg',
   'yeni/2026-05-14_203656.jpg',
+  'yeni/2026-05-14_211230.jpg',
   'eski/2026-05-14_203036.jpg',
-  'eski/2026-05-14_203828.jpg',
+  'eski/2026-05-14_203210.jpg',
   'yeni/2026-05-14_204920.jpg',
   'yeni/2026-05-14_204243.jpg',
   'yeni/2026-05-14_204224.jpg',
