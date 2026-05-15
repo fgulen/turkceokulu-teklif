@@ -959,6 +959,25 @@
 
   .brand-details strong { color: var(--on-surface); }
 
+  /* ===== BACK TO INDEX ===== */
+  .back-to-index {
+    position: absolute;
+    bottom: 1.2cm;
+    left: 2cm;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .back-to-index:hover { opacity: 1; color: var(--primary); }
+  @media print { .back-to-index { display: none; } }
+
   /* ===== PAGE NUMBER ===== */
   .page-number {
     position: absolute;
@@ -1230,6 +1249,10 @@ function updateToggle() {
       <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">8</span>
       <div><div style="font-weight:600;">Yol Haritası</div><div style="font-size:13px;color:var(--on-surface-variant);">Geliştirme takvimi ve gelecek vizyonu</div></div>
     </a>
+    <a href="#page-test" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
+      <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;flex-shrink:0;">QA</span>
+      <div><div style="font-weight:600;">Kalite ve Test Stratejisi</div><div style="font-size:13px;color:var(--on-surface-variant);">E2E (Playwright), Güvenlik (OWASP ZAP), Yük Testi (k6), CI/CD Kalite Kapıları</div></div>
+    </a>
     <a href="#page-9" style="display:flex;align-items:center;gap:1rem;padding:0.75rem 1rem;border-radius:var(--radius-md);text-decoration:none;color:var(--on-surface);background:var(--surface-container-low);">
       <span style="width:2rem;height:2rem;border-radius:var(--radius-sm);background:var(--primary);color:var(--on-primary);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex-shrink:0;">9</span>
       <div><div style="font-weight:600;">Kurumsal Kimlik</div><div style="font-size:13px;color:var(--on-surface-variant);">Butonlar, kartlar, input alanları, bannerlar ve etkinlik türleri</div></div>
@@ -1315,6 +1338,9 @@ function updateToggle() {
         <tr><td>Sosyal Giriş</td><td>Google + Apple</td><td class="status-no">Ertelendi</td></tr>
         <tr><td>Ödeme</td><td>Stripe</td><td class="status-no">Sırada</td></tr>
         <tr><td>Mobil</td><td>React Native + Expo</td><td class="status-no">Faz 3</td></tr>
+        <tr><td>E2E Test</td><td>Playwright (Next.js native)</td><td class="status-no">Faz 2</td></tr>
+        <tr><td>Yük Testi</td><td>k6</td><td class="status-no">Faz 2.5</td></tr>
+        <tr><td>Güvenlik</td><td>OWASP ZAP · npm audit</td><td class="status-no">Faz 2.5</td></tr>
       </tbody>
     </table>
   </div>
@@ -1470,8 +1496,8 @@ function updateToggle() {
     <div class="card">
       <h3>Mevcut durum</h3>
       <ul>
-        <li>2013'ten beri yayında, 48 ülke, 54.000+ kullanıcı</li>
-        <li>20 milyon etkileşim, organik büyüme</li>
+        <li>2013'ten beri yayında, 48 ülke, 54.000+ tarihsel kayıt</li>
+        <li>20 milyon etkileşim (tarihsel veri — yeni sistemde sıfırdan başlanmaktadır)</li>
         <li>Nevlisan, Anadolu DKM ve Dilset yayınlarından oluşan 30 adet ders kitabı</li>
         <li>A1'den C2'ye tüm CEFR seviyelerinde içerik</li>
         <li>ASP.NET 4.5 + Bootstrap 2 — 13 yıllık altyapı</li>
@@ -1490,6 +1516,11 @@ function updateToggle() {
         <li>GDPR, DSGVO ve KVKK için özelleştirilebilir teknik altyapı (bölgesel cluster desteği)</li>
       </ul>
     </div>
+  </div>
+
+  <div class="callout" style="border-left-color:var(--outline-variant);margin-bottom:1.25rem;">
+    <div class="callout-marker" style="background:var(--outline);color:#fff;font-size:0.6rem;">!</div>
+    <p><strong>Platform Geçiş Notu:</strong> Şifreleme altyapısındaki güncelleme ile hosting kapasitesi ve maliyet optimizasyonu gerekçesiyle; 20 milyon kullanıcı etkileşim kaydı ve mevcut kullanıcı hesapları yeni sisteme taşınmamıştır. Yeni platform, sıfır kullanıcı tabanıyla başlatılacak olup eski sistemin içerik birikimi (kitaplar, üniteler, etkinlikler) korunmaktadır. Bu karar, hem teknik sürdürülebilirlik hem de GDPR/KVKK kapsamındaki veri minimizasyonu ilkesiyle uyumludur.</p>
   </div>
 
   <div class="card" style="margin-bottom:1.25rem;">
@@ -1656,11 +1687,13 @@ function updateToggle() {
       <div>
         <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--secondary-container);margin-bottom:0.1rem;">Haziran 2026</div>
         <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 2: Web MVP ve Ödeme Altyapısı</div>
-        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">Ödeme sistemi entegrasyonu, Kahoot canlı oyun, kalan etkinlik türleri ve Redis cache planlanmaktadır. Sosyal giriş (Google, Apple) sonraki güncellemeye alındı; takvim görüşmeler neticesinde netleştirilecektir.</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">Ödeme sistemi entegrasyonu, Kahoot canlı oyun, kalan etkinlik türleri ve Redis cache planlanmaktadır. Sosyal giriş sonraki güncellemeye alındı. <strong style="color:var(--on-surface);">Bu fazda Playwright ile E2E test altyapısı kurulur;</strong> auth akışları, 5 etkinlik tipi ve kurumsal panel kritik yolları kapsanır. npm audit CI'ya entegre edilir.</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Ödeme Sistemi</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Kahoot Canlı</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(87,223,254,0.15);color:var(--on-secondary-container);">Redis</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ E2E Kurulum</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ npm audit CI</span>
         </div>
       </div>
     </div>
@@ -1672,12 +1705,16 @@ function updateToggle() {
       <div>
         <div style="font-size:12px;font-weight:600;line-height:16px;color:var(--tertiary);margin-bottom:0.1rem;">Temmuz – Eylül 2026</div>
         <div style="font-size:15px;font-weight:600;line-height:22px;color:var(--on-surface);margin-bottom:0.15rem;">Faz 2.5: Kapalı Beta ve Canlı Test</div>
-        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">Belirli kullanıcılar için pilot uygulama. 1v1 Düello multiplayer, yeni etkinlik türleri, Stripe entegrasyonu. Geri bildirim toplama, hata düzeltme ve performans iyileştirmeleri.</div>
+        <div style="font-size:13px;font-weight:400;line-height:20px;color:var(--on-surface-variant);margin-bottom:0.4rem;">Belirli kullanıcılar için pilot uygulama. 1v1 Düello multiplayer, yeni etkinlik türleri, Stripe entegrasyonu. <strong style="color:var(--on-surface);">Bu faz kalite geçidi fazıdır:</strong> tam E2E suite, OWASP ZAP güvenlik auditi, k6 ile 100 eş zamanlı kullanıcı yük testi, Stripe webhook doğrulaması ve SignalR güvenlik kontrolleri tamamlanmadan beta kamuya açılmaz.</div>
         <div style="display:flex;flex-wrap:wrap;gap:0.35rem;">
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">1v1 Düello</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Pilot Uygulama</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Canlı Test</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(104,51,209,0.1);color:var(--tertiary);">Geri Bildirim</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(220,38,38,0.12);color:#dc2626;font-weight:700;">Güvenlik Auditi</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(220,38,38,0.12);color:#dc2626;font-weight:700;">OWASP ZAP</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ Tam E2E Suite</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ k6 Yük Testi</span>
         </div>
       </div>
     </div>
@@ -1695,6 +1732,8 @@ function updateToggle() {
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Android</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Açık Beta</span>
           <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(27,117,188,0.1);color:var(--primary);">Offline Mod</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ Mobil E2E (Maestro)</span>
+          <span style="font-size:11px;font-weight:500;padding:0.15rem 0.45rem;border-radius:var(--radius-sm);background:rgba(22,163,74,0.15);color:#15803d;font-weight:700;">✓ App Store Uyumluluk</span>
         </div>
       </div>
     </div>
@@ -1723,6 +1762,154 @@ function updateToggle() {
     
     <span class="page-number" style="position:static;opacity:1;">8</span>
   </div>
+  <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
+</div>
+
+<!-- PAGE TEST: QUALITY & TESTING STRATEGY -->
+<div class="page" id="page-test">
+  <h2 class="section-title">Kalite ve Test Stratejisi</h2>
+  <div class="section-line" style="background:var(--tertiary);"></div>
+
+  <div class="callout" style="border-left-color:var(--tertiary);margin-bottom:1.5rem;">
+    <div class="callout-marker" style="background:var(--tertiary);">✓</div>
+    <p>Kalite bir son adım değil, her fazın içine gömülü zorunlu bir süreçtir. E2E testler, güvenlik auditleri ve performans eşikleri geliştirme takvimine entegredir. <strong>Faz 2.5 açık betaya geçmeden önce tüm kalite kapıları geçilmiş olmalıdır.</strong></p>
+  </div>
+
+  <h3 class="section-title-sm">Kapsam Haritası — Ne Yapılacak, Ne Opsiyonel?</h3>
+
+  <div class="callout" style="border-left-color:var(--primary);margin-bottom:1rem;padding:0.6rem 1rem;">
+    <div class="callout-marker" style="background:var(--primary);font-size:11px;">ℹ</div>
+    <p style="font-size:12px;">Platform hedef ölçeği: <strong>günlük ~400 aktif öğrenci</strong>. Tüm test hedefleri ve performans eşikleri bu ölçeğe göre kalibre edilmiştir — kurumsal ölçek büyüdükçe yeniden değerlendirilebilir. Kalite süreçlerinin <strong>yaklaşık %90'ı</strong> proje kapsamında teslim edilir.</p>
+  </div>
+
+  <div class="two-col" style="margin-bottom:1.5rem;">
+    <div class="card" style="border-top:3px solid #16a34a;">
+      <h3 style="color:#16a34a;margin-bottom:0.75rem;">✓ Proje Kapsamında Teslim Edilecekler</h3>
+      <ul style="display:flex;flex-direction:column;gap:0.4rem;">
+        <li style="font-size:12px;"><strong>npm audit CI</strong> — Her kod değişikliğinde otomatik bağımlılık taraması, kritik açıkta deploy bloklama</li>
+        <li style="font-size:12px;"><strong>Playwright E2E — Kritik akışlar</strong> — Kayıt, ders döngüsü, kalp, ödeme, öğretmen paneli (~10–15 akış)</li>
+        <li style="font-size:12px;"><strong>OWASP ZAP otomatik baseline</strong> — Staging ortamına otomatik güvenlik taraması; bilinen açıklar raporlanır</li>
+        <li style="font-size:12px;"><strong>k6 yük testi</strong> — 100 eş zamanlı bağlantı × 5 dk (400 günlük kullanıcı için fazlasıyla yeterli)</li>
+        <li style="font-size:12px;"><strong>Güvenlik implementasyonu</strong> — JWT, rate limiting, IDOR koruması, input validation; testlerle doğrulanır</li>
+        <li style="font-size:12px;"><strong>GDPR veri silme testi</strong> — Silme talebi → API → veritabanı; uçtan uca otomatik doğrulama</li>
+        <li style="font-size:12px;"><strong>Stripe sandbox testleri</strong> — Ödeme döngüsü, webhook, iptal ve başarısız ödeme senaryoları</li>
+      </ul>
+    </div>
+    <div class="card" style="border-top:3px solid var(--outline-variant);">
+      <h3 style="color:var(--on-surface-variant);margin-bottom:0.75rem;">+ Opsiyonel Ek Destek (Kapsam Dışı)</h3>
+      <ul style="display:flex;flex-direction:column;gap:0.4rem;">
+        <li style="font-size:12px;"><strong>Manuel güvenlik testi (pentest)</strong> — Otomatik taramanın ötesinde, güvenlik uzmanı gözüyle bir kez inceleme. Küçük ölçekte zorunlu değil; isterseniz planlayabiliriz.</li>
+        <li style="font-size:12px;"><strong>Manuel kitap içerik kontrolü</strong> — Nevlisan kitaplarından aktarılan içeriklerin pedagojik doğruluğu için editör/öğretmen spot-check'i. İçerik sahibi zaten ekipte olduğundan kolayca yönetilebilir.</li>
+        <li style="font-size:12px;"><strong>Maestro mobil E2E</strong> — Faz 3'e özel; gerçek cihaz testleri. Zamanlama App Store süreciyle birlikte planlanır.</li>
+        <li style="font-size:12px;"><strong>Erişilebilirlik (WCAG) tam auditi</strong> — Temel kontroller yapılır; kurumsal müşteri talep ederse kapsamlı inceleme eklenebilir.</li>
+      </ul>
+      <div style="margin-top:0.75rem;padding:0.5rem 0.75rem;background:var(--surface-container-low);border-radius:var(--radius-sm);font-size:11px;color:var(--on-surface-variant);">
+        Bu kalemler ihtiyaca göre konuşulabilir. Mevcut ölçekte çoğu gerekli değildir.
+      </div>
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">E2E Test Planı — Playwright</h3>
+  <div class="product-grid" style="margin-bottom:1.5rem;">
+    <div class="product-card">
+      <div class="product-card-icon feature" style="background:#1b75bc;">K</div>
+      <h4>Kimlik ve Oturum</h4>
+      <p style="font-size:12px;">Kayıt, e-postalı/e-postasız giriş, JWT yenileme döngüsü, QR + PIN girişi, token çalınma simülasyonu, oturum zaman aşımı, çoklu cihaz.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon edu" style="background:#0d9488;">E</div>
+      <h4>Etkinlik Motoru</h4>
+      <p style="font-size:12px;">5 etkinlik tipinin tam döngüsü: soru → cevap → geribildirim → XP. Yanlış cevap → kalp kaybı → kalpsiz durum. Zaman aşımı davranışı.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon feature" style="background:#ea580c;">G</div>
+      <h4>Gamification</h4>
+      <p style="font-size:12px;">Combo başlama/kırılma/sıfırlanma. Streak gün geçişi ve dondurucu. Lig sıralama hesabı. Günlük görev tamamlanma ve ödül akışı.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon edu">P</div>
+      <h4>Kurumsal Panel</h4>
+      <p style="font-size:12px;">Sınıf oluşturma → öğrenci ekleme → QR PDF üretimi → öğrenci girişi → ödev atama → Excel rapor indirme akışı.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon ai">AI</div>
+      <h4>AI Stüdyo</h4>
+      <p style="font-size:12px;">İçerik talebi → model yanıtı → kaydetme → Word export. CEFR seviyesine göre çıktı varyasyonu. Hata durumu (timeout, API limiti) yönetimi.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-card-icon pay" style="background:#7c3aed;">Ö</div>
+      <h4>Ödeme Akışı</h4>
+      <p style="font-size:12px;">Stripe test modu: abonelik başlatma → webhook işleme → premium aktifleştirme → iptal → erişim iptali. Başarısız ödeme senaryoları.</p>
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">Güvenlik Denetimi</h3>
+  <div class="two-col" style="margin-bottom:1.5rem;">
+    <div class="card">
+      <h3>OWASP Top 10 Kapsamı</h3>
+      <ul>
+        <li><strong>A01 Broken Access Control</strong> — Öğrenci→admin rol geçişi denemeleri, URL manipülasyonu</li>
+        <li><strong>A02 Cryptographic Failures</strong> — Şifreli alanların plaintext sızıntı kontrolü, HTTPS zorunluluğu</li>
+        <li><strong>A03 Injection</strong> — SQL injection, parametre manipülasyonu, dosya yolu traversal</li>
+        <li><strong>A04 Insecure Design</strong> — Lisans bypass denemeleri, iş mantığı açıkları</li>
+        <li><strong>A05 Security Misconfiguration</strong> — HTTP header denetimi, CORS politikası, hata mesajı sızıntısı</li>
+        <li><strong>A07 Auth Failures</strong> — JWT brute force, token tekrar kullanımı, refresh token süresi</li>
+        <li><strong>A09 Logging & Monitoring</strong> — Şüpheli istek loglarının doğrulanması, uyarı mekanizmaları</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Platform-Spesifik Kontroller</h3>
+      <ul>
+        <li><strong>Rate Limiting</strong> — Endpoint başına saniye/dakika istek limiti, AI stüdyo kota koruması</li>
+        <li><strong>SignalR Güvenliği</strong> — Kahoot odasına yetkisiz katılım, mesaj sahteciliği denemeleri</li>
+        <li><strong>GDPR Silme Doğrulama</strong> — Veri silme/anonimleştirme akışının uçtan uca testi</li>
+        <li><strong>XSS ve Input Sanitization</strong> — Soru metni, kullanıcı adı, AI prompt alanları</li>
+        <li><strong>Dosya Yükleme</strong> — Tip doğrulama, boyut limiti, zararlı içerik taraması</li>
+        <li><strong>Bağımlılık Taraması</strong> — npm audit CI entegrasyonu, kritik CVE otomatik bildirimi</li>
+        <li><strong>Stripe Webhook</strong> — İmza doğrulama, tekrar oynatma (replay) saldırısı koruması</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="section-title-sm">Performans Eşikleri ve CI/CD Kalite Kapıları</h3>
+  <div class="two-col" style="margin-bottom:0;">
+    <div class="table-wrap">
+      <table class="stack-table">
+        <thead><tr><th>Metrik</th><th>Hedef</th></tr></thead>
+        <tbody>
+          <tr><td>API ortalama yanıt</td><td>< 300ms</td></tr>
+          <tr><td>API P95 yanıt</td><td>< 800ms</td></tr>
+          <tr><td>Sayfa LCP (ilk yükleme)</td><td>< 2s</td></tr>
+          <tr><td>Etkinlik ekranı render</td><td>< 1s</td></tr>
+          <tr><td>Kahoot eş zamanlı kullanıcı</td><td>30 kullanıcı / oda</td></tr>
+          <tr><td>SignalR event latency</td><td>< 150ms</td></tr>
+          <tr><td>k6 yük testi hedefi</td><td>100 eş zamanlı · 5 dk</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card" style="padding:1rem;">
+      <h3>CI/CD Pipeline Kapıları</h3>
+      <div style="display:flex;flex-direction:column;gap:0.6rem;">
+        <div style="padding:0.5rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);border-left:3px solid var(--primary);">
+          <div style="font-size:12px;font-weight:700;color:var(--primary);margin-bottom:0.2rem;">Her PR Açıldığında</div>
+          <div style="font-size:11px;color:var(--on-surface-variant);">TypeScript check · Build · Kritik E2E akışlar · npm audit</div>
+        </div>
+        <div style="padding:0.5rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);border-left:3px solid var(--secondary-container);">
+          <div style="font-size:12px;font-weight:700;color:var(--on-secondary-container);margin-bottom:0.2rem;">Faz 2 Deploy Öncesi</div>
+          <div style="font-size:11px;color:var(--on-surface-variant);">Tam E2E suite · Stripe sandbox · Gamification döngüsü doğrulama</div>
+        </div>
+        <div style="padding:0.5rem 0.75rem;background:rgba(220,38,38,0.06);border-radius:var(--radius-sm);border-left:3px solid #dc2626;">
+          <div style="font-size:12px;font-weight:700;color:#dc2626;margin-bottom:0.2rem;">Faz 2.5 — Beta Geçiş Kapısı</div>
+          <div style="font-size:11px;color:var(--on-surface-variant);">OWASP ZAP auditi · k6 yük testi · Güvenlik raporu onayı · GDPR silme testi</div>
+        </div>
+        <div style="padding:0.5rem 0.75rem;background:var(--surface-container);border-radius:var(--radius-sm);border-left:3px solid var(--tertiary);">
+          <div style="font-size:12px;font-weight:700;color:var(--tertiary);margin-bottom:0.2rem;">Faz 3 — App Store Öncesi</div>
+          <div style="font-size:11px;color:var(--on-surface-variant);">Maestro mobil E2E · WCAG 2.1 AA erişilebilirlik · Store uyumluluk kontrolleri</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="design-credit"><a href="https://opera-labs.vercel.app/" target="_blank" rel="noopener">Opera Labs Design</a> <span style="opacity:0.5;">by fg</span></div>
 </div>
 
@@ -2088,6 +2275,14 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeLightbox();
   if (e.key === 'ArrowLeft') prevImage();
   if (e.key === 'ArrowRight') nextImage();
+});
+
+document.querySelectorAll('.page:not(#page-1):not(#page-2)').forEach(function(page) {
+  var btn = document.createElement('a');
+  btn.href = '#page-2';
+  btn.className = 'back-to-index';
+  btn.innerHTML = '↑ İçindekiler';
+  page.appendChild(btn);
 });
 </script>
 
